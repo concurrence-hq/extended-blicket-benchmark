@@ -1,0 +1,23 @@
+run_number,episodes_ran,notes
+01,450,Initial 3-obj pilot; bare LLM outperforms CG agents
+02,300,Bug fixes (env/triggers/CG); clean retest on 3-obj
+03,300,5-obj scaling; competitive inhibition; raised thresholds
+04,90,Hidden moderator replication batch; n=30 to n=60 per cell
+05,75,Switch-point calibration pilot; 5 cells x 15 episodes
+06,300,Differential exploration depth; sw=3 and sw=5; 6 cells x 50
+07,120,Post-switch difficulty pilot; conjunctive post-switch rules {CD}/{AC}/{CDE}; 2 agents x 3 rules x 20 episodes; seed 501
+08,200,Powered follow-up on {CDE}; 3 agents (base_llm/cg_only/full_cg_db) x 50ep + 2 exploratory runway-compression arms (25ep each); seed 601
+09,60,Order-sensitive complexity pilot; 3-obj and 4-obj order; 2 agents (base_llm/full_cg_db) x 2 conditions x 15ep; floor effect — information desert; seed 901
+10,60,Partial feedback order-sensitive pilot; 3-obj order + partial feedback (object identity revealed); 2 agents x 2 step budgets (20/40) x 15ep; seed 1001
+10b,60,Gradual periodic feedback order-sensitive pilot; 3-obj and 4-obj order + gradual object revelation (1 per 5 steps); 2 agents x 2 conditions x 15ep; seed 1051
+10c,60,Revised ORDER_TESTING + randomized labels; 3-obj order + gradual feedback; 2 agents x 2 step budgets (40/55) x 15ep; seed 1101
+10d,160,Powered 3-obj replication (n=50) + cg_only attribution + 4-obj pilot; Phase 1: 3 cells (base_llm/cg_only/full_cg_db) x 50ep 40 steps; Phase 2: 2 cells x 5ep 4-obj 75 steps; base_llm 56% cg_only 42% full_cg_db 56%; 10c advantage did not replicate (0.0pp gap); $108; seed 1201-1305
+10d-diag,30,Diagnostic replication of Run 10c seeds; 2 cells (base_llm/full_cg_db) x 15ep 40 steps; base_llm 73% full_cg_db 73%; base_llm rose +20pp (ceiling/model drift); null confirmed genuine; no implementation regression; $17; seed 1101-1115
+10e,60,Stability calibration + 4-obj signal check; instrumentation added (temperature=1.0 + response model logging); 3-obj calibration 10 seeds x 2 days + 4-obj 2 cells x 10 seeds x 2 days 75 steps; calibration stable (50%/60%); 4-obj pooled base_llm 10% full_cg_db 20%; model aliasing ruled out; seed 2001-2010/1401-1410
+10f,50,4-obj step budget pilot; calibration 10ep + 4 cells (base_llm/full_cg_db x 100/125 steps) x 10ep; 100-step: base_llm 20% full_cg_db 40% (+20pp); 125-step: base_llm 30% full_cg_db 20% (-10pp); DB premature convergence at higher steps; seed 2001-2010/1411-1430
+11a,30,ORDER_STOCHASTIC combined condition pilot; 2-obj rule (A→B p=0.7) 5-obj space 75 steps; 2 cells (base_llm/full_cg_db) x 15ep; base_llm 73% full_cg_db 67%; no scaffold advantage; competitive inhibition negligible (1/306 suppression); $43; seed 1101-1115
+11b,45,3-obj ORDER_STOCHASTIC with v11b DB; 3-obj rule p=0.7 5-obj space 100 steps; 3 cells (base_llm/cg_only/full_cg_db) x 15ep; base_llm 27% cg_only 0% full_cg_db 13%; CG-only actively harmful; object identification is primary bottleneck; $112; seed 1201-1215
+11c,45,v2 CG (OBJECT_RELEVANCE_SCREENING) + lowered stochasticity threshold (7→6); 3-obj ORDER_STOCHASTIC 100 steps; 3 cells x 15ep; base_llm 13% cg_only(v2) 20% full_cg_db(v2) 7%; v2 CG rescues cg_only; DB degrades v2 CG; ORS backstop fires 100%; $126; seed 1301-1315
+11d-pre,10,Static 7-state CG smoke test; 3-obj ORDER_STOCHASTIC 100 steps; 2 topologies (v3_static_linear/v3_static_branch) x 5ep; linear 40% branch 0%; linear CT absorption (agent stuck in CT); branch premature progression; neither topology viable as-is; $27; seed 1401-1405
+11e,45,v4 CG (subset-testing ORS) + lean DB (3 behaviors); 3-obj ORDER_STOCHASTIC 100 steps; 3 cells x 15ep; base_llm 0% cg_only(v4) 0% full_cg_db(v4) 7%; all cells near floor; ORS backstop 87-93% (down from 100%); stochasticity detection regressed 60%→20%; first positive scaffold delta (+7pp); desync fix blocked 12 invalid transitions; $127; seed 1501-1515
+10g,51,Powered replication of 10f 100-step finding; CAL 3/10 (30%) below threshold — overridden; 2 cells (base_llm/full_cg_db) x 20ep 100 steps; fresh: base_llm 20% full_cg_db 25% (+5pp); pooled with 10f (N=30): base_llm 20% full_cg_db 30% (+10pp); Fisher p=0.276 (n.s.); pilot effect did not replicate at magnitude; 187 unexpected desync fix activations on v1 CG (confound); cost limiter fix added to episode_runner.py; $122.88; seed 2001-2010 (CAL) / 1421-1440 (primary) / 1411 (compat)

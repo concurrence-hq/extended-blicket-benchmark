@@ -1,0 +1,293 @@
+{
+  "description": "Run 8 three-way analysis with Fisher exact tests and Wilson CIs",
+  "switch_after_n": 3,
+  "cell_labels": {
+    "A": "Base LLM (75-step)",
+    "B": "CG-only (75-step)",
+    "C": "Full CG+DB (75-step)",
+    "D": "Base LLM (50-step)",
+    "E": "Full CG+DB (50-step)"
+  },
+  "cell_stats": {
+    "A": {
+      "label": "Base LLM (75-step)",
+      "total_episodes": 50,
+      "pre_switch": {
+        "count": 13,
+        "success": 13,
+        "accuracy": 1.0,
+        "wilson_ci_95": [
+          0.7719,
+          1.0
+        ]
+      },
+      "exactly_n": {
+        "count": 7,
+        "success": 0,
+        "accuracy": 0.0,
+        "wilson_ci_95": [
+          0.0,
+          0.3543
+        ]
+      },
+      "reasoning_eligible": {
+        "count": 30,
+        "success": 22,
+        "accuracy": 0.7333,
+        "wilson_ci_95": [
+          0.5555,
+          0.8582
+        ]
+      },
+      "post_switch": {
+        "count": 37,
+        "success": 22,
+        "accuracy": 0.5946,
+        "wilson_ci_95": [
+          0.4349,
+          0.7365
+        ]
+      }
+    },
+    "B": {
+      "label": "CG-only (75-step)",
+      "total_episodes": 50,
+      "pre_switch": {
+        "count": 3,
+        "success": 3,
+        "accuracy": 1.0,
+        "wilson_ci_95": [
+          0.4385,
+          1.0
+        ]
+      },
+      "exactly_n": {
+        "count": 14,
+        "success": 0,
+        "accuracy": 0.0,
+        "wilson_ci_95": [
+          0.0,
+          0.2153
+        ]
+      },
+      "reasoning_eligible": {
+        "count": 33,
+        "success": 31,
+        "accuracy": 0.9394,
+        "wilson_ci_95": [
+          0.8039,
+          0.9832
+        ]
+      },
+      "post_switch": {
+        "count": 47,
+        "success": 31,
+        "accuracy": 0.6596,
+        "wilson_ci_95": [
+          0.5167,
+          0.7783
+        ]
+      }
+    },
+    "C": {
+      "label": "Full CG+DB (75-step)",
+      "total_episodes": 50,
+      "pre_switch": {
+        "count": 4,
+        "success": 4,
+        "accuracy": 1.0,
+        "wilson_ci_95": [
+          0.5101,
+          1.0
+        ]
+      },
+      "exactly_n": {
+        "count": 3,
+        "success": 0,
+        "accuracy": 0.0,
+        "wilson_ci_95": [
+          0.0,
+          0.5615
+        ]
+      },
+      "reasoning_eligible": {
+        "count": 43,
+        "success": 41,
+        "accuracy": 0.9535,
+        "wilson_ci_95": [
+          0.8454,
+          0.9872
+        ]
+      },
+      "post_switch": {
+        "count": 46,
+        "success": 41,
+        "accuracy": 0.8913,
+        "wilson_ci_95": [
+          0.7696,
+          0.9527
+        ]
+      }
+    },
+    "D": {
+      "label": "Base LLM (50-step)",
+      "total_episodes": 25,
+      "pre_switch": {
+        "count": 5,
+        "success": 5,
+        "accuracy": 1.0,
+        "wilson_ci_95": [
+          0.5655,
+          1.0
+        ]
+      },
+      "exactly_n": {
+        "count": 5,
+        "success": 0,
+        "accuracy": 0.0,
+        "wilson_ci_95": [
+          0.0,
+          0.4345
+        ]
+      },
+      "reasoning_eligible": {
+        "count": 15,
+        "success": 12,
+        "accuracy": 0.8,
+        "wilson_ci_95": [
+          0.5481,
+          0.9295
+        ]
+      },
+      "post_switch": {
+        "count": 20,
+        "success": 12,
+        "accuracy": 0.6,
+        "wilson_ci_95": [
+          0.3866,
+          0.7812
+        ]
+      }
+    },
+    "E": {
+      "label": "Full CG+DB (50-step)",
+      "total_episodes": 25,
+      "pre_switch": {
+        "count": 1,
+        "success": 0,
+        "accuracy": 0.0,
+        "wilson_ci_95": [
+          0.0,
+          0.7935
+        ]
+      },
+      "exactly_n": {
+        "count": 4,
+        "success": 0,
+        "accuracy": 0.0,
+        "wilson_ci_95": [
+          0.0,
+          0.4899
+        ]
+      },
+      "reasoning_eligible": {
+        "count": 20,
+        "success": 18,
+        "accuracy": 0.9,
+        "wilson_ci_95": [
+          0.699,
+          0.9721
+        ]
+      },
+      "post_switch": {
+        "count": 24,
+        "success": 18,
+        "accuracy": 0.75,
+        "wilson_ci_95": [
+          0.551,
+          0.88
+        ]
+      }
+    }
+  },
+  "fisher_tests": [
+    {
+      "label": "A vs C \u2014 RE",
+      "cell1": "A",
+      "cell2": "C",
+      "category": "reasoning_eligible",
+      "cell1_success": 22,
+      "cell1_n": 30,
+      "cell2_success": 41,
+      "cell2_n": 43,
+      "odds_ratio": 0.1341,
+      "p_value": 0.012631,
+      "significant_0.05": true
+    },
+    {
+      "label": "A vs B \u2014 RE",
+      "cell1": "A",
+      "cell2": "B",
+      "category": "reasoning_eligible",
+      "cell1_success": 22,
+      "cell1_n": 30,
+      "cell2_success": 31,
+      "cell2_n": 33,
+      "odds_ratio": 0.1774,
+      "p_value": 0.037886,
+      "significant_0.05": true
+    },
+    {
+      "label": "B vs C \u2014 RE",
+      "cell1": "B",
+      "cell2": "C",
+      "category": "reasoning_eligible",
+      "cell1_success": 31,
+      "cell1_n": 33,
+      "cell2_success": 41,
+      "cell2_n": 43,
+      "odds_ratio": 0.7561,
+      "p_value": 1.0,
+      "significant_0.05": false
+    },
+    {
+      "label": "A vs C \u2014 Post-Switch",
+      "cell1": "A",
+      "cell2": "C",
+      "category": "post_switch",
+      "cell1_success": 22,
+      "cell1_n": 37,
+      "cell2_success": 41,
+      "cell2_n": 46,
+      "odds_ratio": 0.1789,
+      "p_value": 0.002107,
+      "significant_0.05": true
+    },
+    {
+      "label": "C vs E \u2014 RE (runway)",
+      "cell1": "C",
+      "cell2": "E",
+      "category": "reasoning_eligible",
+      "cell1_success": 41,
+      "cell1_n": 43,
+      "cell2_success": 18,
+      "cell2_n": 20,
+      "odds_ratio": 2.2778,
+      "p_value": 0.58564,
+      "significant_0.05": false
+    },
+    {
+      "label": "A vs D \u2014 RE (runway)",
+      "cell1": "A",
+      "cell2": "D",
+      "category": "reasoning_eligible",
+      "cell1_success": 22,
+      "cell1_n": 30,
+      "cell2_success": 12,
+      "cell2_n": 15,
+      "odds_ratio": 0.6875,
+      "p_value": 0.726236,
+      "significant_0.05": false
+    }
+  ]
+}

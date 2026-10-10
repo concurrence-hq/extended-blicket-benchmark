@@ -1,0 +1,1737 @@
+{
+  "cells": {
+    "A1": {
+      "agent": "base_llm",
+      "difficulty": "medium",
+      "post_switch_rule": "conjunctive {C,D}",
+      "episodes": 20,
+      "correct": 17,
+      "accuracy": 0.85,
+      "activation_decomposition": {
+        "pre_switch": {
+          "count": 6,
+          "correct": 6
+        },
+        "exactly_N": {
+          "count": 2,
+          "correct": 0
+        },
+        "reasoning_eligible": {
+          "count": 12,
+          "correct": 11
+        }
+      },
+      "error_classification": {
+        "pre_switch_lock_in": 2,
+        "post_switch_wrong_objects": 1
+      },
+      "step_counts": {
+        "correct_mean": 29.35,
+        "correct_median": 31,
+        "incorrect_mean": 19.33,
+        "incorrect_median": 19
+      },
+      "wall_time": {
+        "mean": 75.27,
+        "median": 78.36
+      },
+      "cost_usd": 6.8722,
+      "total_input_tokens": 2099870,
+      "total_output_tokens": 38175,
+      "total_trigger_tokens": 0,
+      "per_episode": [
+        {
+          "ep": 0,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 37,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 91.16,
+          "error_type": null
+        },
+        {
+          "ep": 1,
+          "success": true,
+          "activations": 6,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 38,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 91.45,
+          "error_type": null
+        },
+        {
+          "ep": 2,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 33,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 94.78,
+          "error_type": null
+        },
+        {
+          "ep": 3,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 11,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 43.18,
+          "error_type": null
+        },
+        {
+          "ep": 4,
+          "success": false,
+          "activations": 5,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 19,
+          "guessed": "conjunctive {A,B,C,D}",
+          "wall_time": 63.18,
+          "error_type": "post_switch_wrong_objects"
+        },
+        {
+          "ep": 5,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 47,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 123.73,
+          "error_type": null
+        },
+        {
+          "ep": 6,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 21,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 51.03,
+          "error_type": null
+        },
+        {
+          "ep": 7,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 23,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 56.89,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 8,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 36,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 77.43,
+          "error_type": null
+        },
+        {
+          "ep": 9,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 16,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 44.74,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 10,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 11,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 37.57,
+          "error_type": null
+        },
+        {
+          "ep": 11,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 29,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 79.29,
+          "error_type": null
+        },
+        {
+          "ep": 12,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 22,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 49.64,
+          "error_type": null
+        },
+        {
+          "ep": 13,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 45,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 131.04,
+          "error_type": null
+        },
+        {
+          "ep": 14,
+          "success": true,
+          "activations": 6,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 28,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 80.1,
+          "error_type": null
+        },
+        {
+          "ep": 15,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 46,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 123.33,
+          "error_type": null
+        },
+        {
+          "ep": 16,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 14,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 40.72,
+          "error_type": null
+        },
+        {
+          "ep": 17,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 18,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 46.53,
+          "error_type": null
+        },
+        {
+          "ep": 18,
+          "success": true,
+          "activations": 6,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 32,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 87.64,
+          "error_type": null
+        },
+        {
+          "ep": 19,
+          "success": true,
+          "activations": 5,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 31,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 91.99,
+          "error_type": null
+        }
+      ]
+    },
+    "A2": {
+      "agent": "full_cg_db",
+      "difficulty": "medium",
+      "post_switch_rule": "conjunctive {C,D}",
+      "episodes": 20,
+      "correct": 16,
+      "accuracy": 0.8,
+      "activation_decomposition": {
+        "pre_switch": {
+          "count": 0,
+          "correct": 0
+        },
+        "exactly_N": {
+          "count": 2,
+          "correct": 0
+        },
+        "reasoning_eligible": {
+          "count": 18,
+          "correct": 16
+        }
+      },
+      "error_classification": {
+        "pre_switch_lock_in": 2,
+        "no_answer": 1,
+        "timeout": 1
+      },
+      "step_counts": {
+        "correct_mean": 55.62,
+        "correct_median": 56.0,
+        "incorrect_mean": 46,
+        "incorrect_median": 41.0
+      },
+      "wall_time": {
+        "mean": 272.41,
+        "median": 218.05
+      },
+      "cost_usd": 24.057,
+      "total_input_tokens": 7903916,
+      "total_output_tokens": 101046,
+      "total_trigger_tokens": 532025,
+      "per_episode": [
+        {
+          "ep": 0,
+          "success": true,
+          "activations": 6,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 48,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 171.75,
+          "error_type": null
+        },
+        {
+          "ep": 1,
+          "success": false,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 53,
+          "guessed": null,
+          "wall_time": 219.91,
+          "error_type": "no_answer"
+        },
+        {
+          "ep": 2,
+          "success": true,
+          "activations": 6,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 73,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 297.48,
+          "error_type": null
+        },
+        {
+          "ep": 3,
+          "success": true,
+          "activations": 11,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 53,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 214.17,
+          "error_type": null
+        },
+        {
+          "ep": 4,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 40,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 164.93,
+          "error_type": null
+        },
+        {
+          "ep": 5,
+          "success": true,
+          "activations": 12,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 63,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 229.56,
+          "error_type": null
+        },
+        {
+          "ep": 6,
+          "success": true,
+          "activations": 11,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 59,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 212.77,
+          "error_type": null
+        },
+        {
+          "ep": 7,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 37,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 154.07,
+          "error_type": null
+        },
+        {
+          "ep": 8,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 49,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 218.07,
+          "error_type": null
+        },
+        {
+          "ep": 9,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 57,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 202.68,
+          "error_type": null
+        },
+        {
+          "ep": 10,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 49,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 220.25,
+          "error_type": null
+        },
+        {
+          "ep": 11,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 59,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 218.03,
+          "error_type": null
+        },
+        {
+          "ep": 12,
+          "success": true,
+          "activations": 6,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 55,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 236.54,
+          "error_type": null
+        },
+        {
+          "ep": 13,
+          "success": true,
+          "activations": 5,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 57,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 253.65,
+          "error_type": null
+        },
+        {
+          "ep": 14,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 71,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 261.74,
+          "error_type": null
+        },
+        {
+          "ep": 15,
+          "success": false,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 75,
+          "guessed": null,
+          "wall_time": 1482.96,
+          "error_type": "timeout"
+        },
+        {
+          "ep": 16,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 29,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 113.94,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 17,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 27,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 118.71,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 18,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 53,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 216.51,
+          "error_type": null
+        },
+        {
+          "ep": 19,
+          "success": true,
+          "activations": 13,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 67,
+          "guessed": "conjunctive {C,D}",
+          "wall_time": 240.43,
+          "error_type": null
+        }
+      ],
+      "db_analysis": {
+        "rc_fire_rate": 0.9,
+        "rc_fired_episodes": 18,
+        "rc_ppv": 0.8889,
+        "rc_sensitivity": 1.0,
+        "rc_fire_steps": [
+          17,
+          21,
+          40,
+          23,
+          19,
+          19,
+          32,
+          15,
+          22,
+          26,
+          25,
+          11,
+          22,
+          40,
+          16,
+          31,
+          27,
+          19
+        ],
+        "rc_mean_fire_step": 23.61,
+        "moderator_detection_reached": 11,
+        "moderator_detection_accuracy": 0.8182,
+        "all_db_fires": {
+          "order_hypothesis": 18,
+          "stochasticity_hypothesis": 10,
+          "rule_change_hypothesis": 18,
+          "exploration_stagnation": 4
+        }
+      }
+    },
+    "B1": {
+      "agent": "base_llm",
+      "difficulty": "hard_interference",
+      "post_switch_rule": "conjunctive {A,C}",
+      "episodes": 20,
+      "correct": 19,
+      "accuracy": 0.95,
+      "activation_decomposition": {
+        "pre_switch": {
+          "count": 4,
+          "correct": 4
+        },
+        "exactly_N": {
+          "count": 1,
+          "correct": 0
+        },
+        "reasoning_eligible": {
+          "count": 15,
+          "correct": 15
+        }
+      },
+      "error_classification": {
+        "pre_switch_lock_in": 1
+      },
+      "step_counts": {
+        "correct_mean": 35.53,
+        "correct_median": 35,
+        "incorrect_mean": 15,
+        "incorrect_median": 15
+      },
+      "wall_time": {
+        "mean": 93.06,
+        "median": 94.09
+      },
+      "cost_usd": 9.9092,
+      "total_input_tokens": 3069947,
+      "total_output_tokens": 46621,
+      "total_trigger_tokens": 0,
+      "per_episode": [
+        {
+          "ep": 0,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 35,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 94.3,
+          "error_type": null
+        },
+        {
+          "ep": 1,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 41,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 105.55,
+          "error_type": null
+        },
+        {
+          "ep": 2,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 27,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 62.3,
+          "error_type": null
+        },
+        {
+          "ep": 3,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 18,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 46.52,
+          "error_type": null
+        },
+        {
+          "ep": 4,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 33,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 87.96,
+          "error_type": null
+        },
+        {
+          "ep": 5,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 48,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 139.54,
+          "error_type": null
+        },
+        {
+          "ep": 6,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 36,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 93.88,
+          "error_type": null
+        },
+        {
+          "ep": 7,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 12,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 35.38,
+          "error_type": null
+        },
+        {
+          "ep": 8,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 35,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 96.15,
+          "error_type": null
+        },
+        {
+          "ep": 9,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 47,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 116.19,
+          "error_type": null
+        },
+        {
+          "ep": 10,
+          "success": true,
+          "activations": 6,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 37,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 94.55,
+          "error_type": null
+        },
+        {
+          "ep": 11,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 33,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 88.71,
+          "error_type": null
+        },
+        {
+          "ep": 12,
+          "success": true,
+          "activations": 13,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 59,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 177.06,
+          "error_type": null
+        },
+        {
+          "ep": 13,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 35,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 89.22,
+          "error_type": null
+        },
+        {
+          "ep": 14,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 39,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 104.2,
+          "error_type": null
+        },
+        {
+          "ep": 15,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 35,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 89.6,
+          "error_type": null
+        },
+        {
+          "ep": 16,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 11,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 36.86,
+          "error_type": null
+        },
+        {
+          "ep": 17,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 45,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 128.39,
+          "error_type": null
+        },
+        {
+          "ep": 18,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 15,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 44.61,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 19,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 49,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 130.32,
+          "error_type": null
+        }
+      ]
+    },
+    "B2": {
+      "agent": "full_cg_db",
+      "difficulty": "hard_interference",
+      "post_switch_rule": "conjunctive {A,C}",
+      "episodes": 20,
+      "correct": 17,
+      "accuracy": 0.85,
+      "activation_decomposition": {
+        "pre_switch": {
+          "count": 1,
+          "correct": 1
+        },
+        "exactly_N": {
+          "count": 2,
+          "correct": 0
+        },
+        "reasoning_eligible": {
+          "count": 17,
+          "correct": 16
+        }
+      },
+      "error_classification": {
+        "pre_switch_lock_in": 2,
+        "post_switch_wrong_type": 1
+      },
+      "step_counts": {
+        "correct_mean": 51.41,
+        "correct_median": 49,
+        "incorrect_mean": 28.33,
+        "incorrect_median": 19
+      },
+      "wall_time": {
+        "mean": 186.97,
+        "median": 204.7
+      },
+      "cost_usd": 20.7321,
+      "total_input_tokens": 6735357,
+      "total_output_tokens": 95549,
+      "total_trigger_tokens": 412353,
+      "per_episode": [
+        {
+          "ep": 0,
+          "success": true,
+          "activations": 12,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 59,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 206.35,
+          "error_type": null
+        },
+        {
+          "ep": 1,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 49,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 162.56,
+          "error_type": null
+        },
+        {
+          "ep": 2,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 27,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 105.92,
+          "error_type": null
+        },
+        {
+          "ep": 3,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 39,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 147.52,
+          "error_type": null
+        },
+        {
+          "ep": 4,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 67,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 218.87,
+          "error_type": null
+        },
+        {
+          "ep": 5,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 45,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 179.58,
+          "error_type": null
+        },
+        {
+          "ep": 6,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 42,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 205.53,
+          "error_type": null
+        },
+        {
+          "ep": 7,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 71,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 246.3,
+          "error_type": null
+        },
+        {
+          "ep": 8,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 45,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 205.46,
+          "error_type": null
+        },
+        {
+          "ep": 9,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 19,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 73.62,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 10,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 47,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 172.02,
+          "error_type": null
+        },
+        {
+          "ep": 11,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 67,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 227.13,
+          "error_type": null
+        },
+        {
+          "ep": 12,
+          "success": false,
+          "activations": 11,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 48,
+          "guessed": "disjunctive {A,B,C}",
+          "wall_time": 220.48,
+          "error_type": "post_switch_wrong_type"
+        },
+        {
+          "ep": 13,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 44,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 163.74,
+          "error_type": null
+        },
+        {
+          "ep": 14,
+          "success": true,
+          "activations": 12,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 67,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 283.46,
+          "error_type": null
+        },
+        {
+          "ep": 15,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 18,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 79.5,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 16,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 55,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 258.17,
+          "error_type": null
+        },
+        {
+          "ep": 17,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 59,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 213.24,
+          "error_type": null
+        },
+        {
+          "ep": 18,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 53,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 203.94,
+          "error_type": null
+        },
+        {
+          "ep": 19,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 38,
+          "guessed": "conjunctive {A,C}",
+          "wall_time": 165.97,
+          "error_type": null
+        }
+      ],
+      "db_analysis": {
+        "rc_fire_rate": 0.8,
+        "rc_fired_episodes": 16,
+        "rc_ppv": 1.0,
+        "rc_sensitivity": 0.9412,
+        "rc_fire_steps": [
+          19,
+          17,
+          16,
+          28,
+          21,
+          21,
+          52,
+          17,
+          21,
+          31,
+          18,
+          29,
+          43,
+          19,
+          22,
+          23
+        ],
+        "rc_mean_fire_step": 24.81,
+        "moderator_detection_reached": 8,
+        "moderator_detection_accuracy": 1.0,
+        "all_db_fires": {
+          "stochasticity_hypothesis": 13,
+          "order_hypothesis": 17,
+          "rule_change_hypothesis": 16,
+          "exploration_stagnation": 5
+        }
+      }
+    },
+    "C1": {
+      "agent": "base_llm",
+      "difficulty": "hard_search_space",
+      "post_switch_rule": "conjunctive {C,D,E}",
+      "episodes": 20,
+      "correct": 16,
+      "accuracy": 0.8,
+      "activation_decomposition": {
+        "pre_switch": {
+          "count": 8,
+          "correct": 8
+        },
+        "exactly_N": {
+          "count": 2,
+          "correct": 0
+        },
+        "reasoning_eligible": {
+          "count": 10,
+          "correct": 8
+        }
+      },
+      "error_classification": {
+        "pre_switch_lock_in": 2,
+        "post_switch_wrong_objects": 2
+      },
+      "step_counts": {
+        "correct_mean": 26.81,
+        "correct_median": 27.0,
+        "incorrect_mean": 23.75,
+        "incorrect_median": 23.5
+      },
+      "wall_time": {
+        "mean": 69.58,
+        "median": 71.85
+      },
+      "cost_usd": 6.1128,
+      "total_input_tokens": 1862130,
+      "total_output_tokens": 35092,
+      "total_trigger_tokens": 0,
+      "per_episode": [
+        {
+          "ep": 0,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 38,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 109.86,
+          "error_type": null
+        },
+        {
+          "ep": 1,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 16,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 41.99,
+          "error_type": null
+        },
+        {
+          "ep": 2,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 42,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 100.98,
+          "error_type": null
+        },
+        {
+          "ep": 3,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 21,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 52.82,
+          "error_type": null
+        },
+        {
+          "ep": 4,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 22,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 55.84,
+          "error_type": null
+        },
+        {
+          "ep": 5,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 13,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 37.88,
+          "error_type": null
+        },
+        {
+          "ep": 6,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 31,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 91.44,
+          "error_type": null
+        },
+        {
+          "ep": 7,
+          "success": true,
+          "activations": 6,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 32,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 78.47,
+          "error_type": null
+        },
+        {
+          "ep": 8,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 45,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 105.45,
+          "error_type": null
+        },
+        {
+          "ep": 9,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 32,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 78.82,
+          "error_type": null
+        },
+        {
+          "ep": 10,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 39,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 95.7,
+          "error_type": null
+        },
+        {
+          "ep": 11,
+          "success": false,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 28,
+          "guessed": "conjunctive {A,B,C,D,E}",
+          "wall_time": 80.61,
+          "error_type": "post_switch_wrong_objects"
+        },
+        {
+          "ep": 12,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 12,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 35.62,
+          "error_type": null
+        },
+        {
+          "ep": 13,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 11,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 32.0,
+          "error_type": null
+        },
+        {
+          "ep": 14,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 23,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 64.74,
+          "error_type": null
+        },
+        {
+          "ep": 15,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 36,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 86.4,
+          "error_type": null
+        },
+        {
+          "ep": 16,
+          "success": false,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 33,
+          "guessed": "conjunctive {A,C,D,E}",
+          "wall_time": 92.19,
+          "error_type": "post_switch_wrong_objects"
+        },
+        {
+          "ep": 17,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 15,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 42.64,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 18,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 19,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 65.23,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 19,
+          "success": true,
+          "activations": 2,
+          "rule_switched": false,
+          "category": "pre_switch",
+          "steps": 16,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 42.95,
+          "error_type": null
+        }
+      ]
+    },
+    "C2": {
+      "agent": "full_cg_db",
+      "difficulty": "hard_search_space",
+      "post_switch_rule": "conjunctive {C,D,E}",
+      "episodes": 20,
+      "correct": 15,
+      "accuracy": 0.75,
+      "activation_decomposition": {
+        "pre_switch": {
+          "count": 0,
+          "correct": 0
+        },
+        "exactly_N": {
+          "count": 5,
+          "correct": 0
+        },
+        "reasoning_eligible": {
+          "count": 15,
+          "correct": 15
+        }
+      },
+      "error_classification": {
+        "pre_switch_lock_in": 5
+      },
+      "step_counts": {
+        "correct_mean": 51.4,
+        "correct_median": 50,
+        "incorrect_mean": 26.2,
+        "incorrect_median": 25
+      },
+      "wall_time": {
+        "mean": 201.12,
+        "median": 172.23
+      },
+      "cost_usd": 18.34,
+      "total_input_tokens": 5962211,
+      "total_output_tokens": 85482,
+      "total_trigger_tokens": 376734,
+      "per_episode": [
+        {
+          "ep": 0,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 29,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 112.04,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 1,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 68,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 225.01,
+          "error_type": null
+        },
+        {
+          "ep": 2,
+          "success": true,
+          "activations": 11,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 50,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 204.72,
+          "error_type": null
+        },
+        {
+          "ep": 3,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 25,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 105.97,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 4,
+          "success": true,
+          "activations": 11,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 54,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 819.18,
+          "error_type": null
+        },
+        {
+          "ep": 5,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 43,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 170.24,
+          "error_type": null
+        },
+        {
+          "ep": 6,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 56,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 189.83,
+          "error_type": null
+        },
+        {
+          "ep": 7,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 59,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 250.82,
+          "error_type": null
+        },
+        {
+          "ep": 8,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 43,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 160.23,
+          "error_type": null
+        },
+        {
+          "ep": 9,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 27,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 109.0,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 10,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 46,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 162.73,
+          "error_type": null
+        },
+        {
+          "ep": 11,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 50,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 182.6,
+          "error_type": null
+        },
+        {
+          "ep": 12,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 25,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 108.78,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 13,
+          "success": false,
+          "activations": 3,
+          "rule_switched": true,
+          "category": "exactly_N",
+          "steps": 25,
+          "guessed": "conjunctive {A,B}",
+          "wall_time": 102.64,
+          "error_type": "pre_switch_lock_in"
+        },
+        {
+          "ep": 14,
+          "success": true,
+          "activations": 8,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 49,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 172.14,
+          "error_type": null
+        },
+        {
+          "ep": 15,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 47,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 172.32,
+          "error_type": null
+        },
+        {
+          "ep": 16,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 64,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 241.17,
+          "error_type": null
+        },
+        {
+          "ep": 17,
+          "success": true,
+          "activations": 7,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 44,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 207.28,
+          "error_type": null
+        },
+        {
+          "ep": 18,
+          "success": true,
+          "activations": 9,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 64,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 197.93,
+          "error_type": null
+        },
+        {
+          "ep": 19,
+          "success": true,
+          "activations": 10,
+          "rule_switched": true,
+          "category": "reasoning_eligible",
+          "steps": 34,
+          "guessed": "conjunctive {C,D,E}",
+          "wall_time": 127.76,
+          "error_type": null
+        }
+      ],
+      "db_analysis": {
+        "rc_fire_rate": 0.75,
+        "rc_fired_episodes": 15,
+        "rc_ppv": 1.0,
+        "rc_sensitivity": 1.0,
+        "rc_fire_steps": [
+          16,
+          11,
+          19,
+          17,
+          21,
+          21,
+          21,
+          15,
+          21,
+          15,
+          16,
+          25,
+          25,
+          15,
+          13
+        ],
+        "rc_mean_fire_step": 18.07,
+        "moderator_detection_reached": 3,
+        "moderator_detection_accuracy": 1.0,
+        "all_db_fires": {
+          "stochasticity_hypothesis": 10,
+          "rule_change_hypothesis": 15,
+          "order_hypothesis": 15,
+          "exploration_stagnation": 5
+        }
+      }
+    }
+  },
+  "summary": {
+    "total_episodes": 120,
+    "total_correct": 100,
+    "overall_accuracy": 0.8333,
+    "total_cost_usd": 86.0233,
+    "by_difficulty": {
+      "medium": {
+        "base_llm": {
+          "accuracy": 0.85,
+          "re_accuracy": 0.9167,
+          "correct": 17,
+          "episodes": 20,
+          "re_correct": 11,
+          "re_episodes": 12
+        },
+        "full_cg_db": {
+          "accuracy": 0.8,
+          "re_accuracy": 0.8889,
+          "correct": 16,
+          "episodes": 20,
+          "re_correct": 16,
+          "re_episodes": 18
+        }
+      },
+      "hard_interference": {
+        "base_llm": {
+          "accuracy": 0.95,
+          "re_accuracy": 1.0,
+          "correct": 19,
+          "episodes": 20,
+          "re_correct": 15,
+          "re_episodes": 15
+        },
+        "full_cg_db": {
+          "accuracy": 0.85,
+          "re_accuracy": 0.9412,
+          "correct": 17,
+          "episodes": 20,
+          "re_correct": 16,
+          "re_episodes": 17
+        }
+      },
+      "hard_search_space": {
+        "base_llm": {
+          "accuracy": 0.8,
+          "re_accuracy": 0.8,
+          "correct": 16,
+          "episodes": 20,
+          "re_correct": 8,
+          "re_episodes": 10
+        },
+        "full_cg_db": {
+          "accuracy": 0.75,
+          "re_accuracy": 1.0,
+          "correct": 15,
+          "episodes": 20,
+          "re_correct": 15,
+          "re_episodes": 15
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,663 @@
+{
+  "run_name": "run11d_prepilot",
+  "description": "Run 11d Pre-Pilot: Static 7-state CG ordering smoke test. Tests Change G (revised ORS guidelines), Change H (ORDER_TESTING + RELIABILITY_TESTING states), and Change I (ORS backstop 25\u219220). 2 cells: S1 (v3_static_linear), S2 (v3_static_branch). 5 episodes per cell, 10 total.",
+  "environment": {
+    "num_objects": 5,
+    "n_correct": 3,
+    "activation_probability": 0.7,
+    "max_steps": 100,
+    "condition": "order_stochastic",
+    "rule_type": "order_sensitive_stochastic",
+    "label_randomization": true
+  },
+  "instrumentation": {
+    "temperature": 1.0,
+    "action_model": "claude-sonnet-4-5-20250929",
+    "initial_exploration_max_steps": 15,
+    "object_screening_max_steps": 20,
+    "order_testing_max_steps": 15,
+    "reliability_testing_max_steps": 10
+  },
+  "cells": [
+    {
+      "label": "S1",
+      "agent_type": "cg_only",
+      "cg_version": "v3_static_linear",
+      "episodes": 5,
+      "seeds": "1401-1405",
+      "backstops": {
+        "initial_exploration_max_steps": 15,
+        "object_screening_max_steps": 20,
+        "order_testing_max_steps": 15,
+        "reliability_testing_max_steps": 10
+      }
+    },
+    {
+      "label": "S2",
+      "agent_type": "cg_only",
+      "cg_version": "v3_static_branch",
+      "episodes": 5,
+      "seeds": "1401-1405",
+      "backstops": {
+        "initial_exploration_max_steps": 15,
+        "object_screening_max_steps": 20,
+        "order_testing_max_steps": 15,
+        "reliability_testing_max_steps": 10
+      }
+    }
+  ],
+  "episode_rules": [
+    {
+      "episode": 0,
+      "rule_seed": 1401,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "episode": 1,
+      "rule_seed": 1402,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "A",
+        "E"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "episode": 2,
+      "rule_seed": 1403,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "C",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "episode": 3,
+      "rule_seed": 1404,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "E"
+      ],
+      "rule_required_order": [
+        "A",
+        "E",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "D"
+      ]
+    },
+    {
+      "episode": 4,
+      "rule_seed": 1405,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    }
+  ],
+  "cost_summary": {
+    "total_cost_usd": 26.722665,
+    "episodes_run": 10,
+    "avg_cost_per_episode": 2.6722665,
+    "remaining_budget_usd": 23.277335,
+    "episode_costs": [
+      {
+        "condition": "prepilot_S1",
+        "agent": "cg_only",
+        "episode": 0,
+        "input_tokens": 1051285,
+        "output_tokens": 6272,
+        "trigger_tokens": 0,
+        "cost_usd": 3.247935,
+        "cumulative_cost_usd": 3.247935
+      },
+      {
+        "condition": "prepilot_S1",
+        "agent": "cg_only",
+        "episode": 1,
+        "input_tokens": 1144729,
+        "output_tokens": 6767,
+        "trigger_tokens": 0,
+        "cost_usd": 3.535692,
+        "cumulative_cost_usd": 6.783627
+      },
+      {
+        "condition": "prepilot_S1",
+        "agent": "cg_only",
+        "episode": 2,
+        "input_tokens": 529066,
+        "output_tokens": 4849,
+        "trigger_tokens": 0,
+        "cost_usd": 1.659933,
+        "cumulative_cost_usd": 8.44356
+      },
+      {
+        "condition": "prepilot_S1",
+        "agent": "cg_only",
+        "episode": 3,
+        "input_tokens": 1095836,
+        "output_tokens": 5823,
+        "trigger_tokens": 0,
+        "cost_usd": 3.374853,
+        "cumulative_cost_usd": 11.818413
+      },
+      {
+        "condition": "prepilot_S1",
+        "agent": "cg_only",
+        "episode": 4,
+        "input_tokens": 774722,
+        "output_tokens": 5754,
+        "trigger_tokens": 0,
+        "cost_usd": 2.410476,
+        "cumulative_cost_usd": 14.228888999999999
+      },
+      {
+        "condition": "prepilot_S2",
+        "agent": "cg_only",
+        "episode": 0,
+        "input_tokens": 1033949,
+        "output_tokens": 5977,
+        "trigger_tokens": 0,
+        "cost_usd": 3.1915020000000003,
+        "cumulative_cost_usd": 17.420391
+      },
+      {
+        "condition": "prepilot_S2",
+        "agent": "cg_only",
+        "episode": 1,
+        "input_tokens": 871028,
+        "output_tokens": 6445,
+        "trigger_tokens": 0,
+        "cost_usd": 2.709759,
+        "cumulative_cost_usd": 20.13015
+      },
+      {
+        "condition": "prepilot_S2",
+        "agent": "cg_only",
+        "episode": 2,
+        "input_tokens": 373742,
+        "output_tokens": 4165,
+        "trigger_tokens": 0,
+        "cost_usd": 1.1837010000000001,
+        "cumulative_cost_usd": 21.313851
+      },
+      {
+        "condition": "prepilot_S2",
+        "agent": "cg_only",
+        "episode": 3,
+        "input_tokens": 1029518,
+        "output_tokens": 6197,
+        "trigger_tokens": 0,
+        "cost_usd": 3.181509,
+        "cumulative_cost_usd": 24.495359999999998
+      },
+      {
+        "condition": "prepilot_S2",
+        "agent": "cg_only",
+        "episode": 4,
+        "input_tokens": 712760,
+        "output_tokens": 5935,
+        "trigger_tokens": 0,
+        "cost_usd": 2.227305,
+        "cumulative_cost_usd": 26.722665
+      }
+    ]
+  },
+  "results": [
+    {
+      "condition": "prepilot_S1",
+      "agent_type": "cg_only",
+      "episode": 0,
+      "success": false,
+      "steps": 98,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "guessed_order": [
+        "C",
+        "B",
+        "A",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1401,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "condition": "prepilot_S1",
+      "agent_type": "cg_only",
+      "episode": 1,
+      "success": true,
+      "steps": 100,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "C",
+        "A",
+        "E"
+      ],
+      "guessed_order": [
+        "C",
+        "A",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_seed": 1402,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "A",
+        "E"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "condition": "prepilot_S1",
+      "agent_type": "cg_only",
+      "episode": 2,
+      "success": false,
+      "steps": 66,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "D",
+        "C",
+        "A"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1403,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "C",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "condition": "prepilot_S1",
+      "agent_type": "cg_only",
+      "episode": 3,
+      "success": false,
+      "steps": 98,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1404,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "E"
+      ],
+      "rule_required_order": [
+        "A",
+        "E",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "D"
+      ]
+    },
+    {
+      "condition": "prepilot_S1",
+      "agent_type": "cg_only",
+      "episode": 4,
+      "success": true,
+      "steps": 82,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_seed": 1405,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    },
+    {
+      "condition": "prepilot_S2",
+      "agent_type": "cg_only",
+      "episode": 0,
+      "success": false,
+      "steps": 95,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "guessed_order": null,
+      "guessed_rule_type": "conjunctive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1401,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "condition": "prepilot_S2",
+      "agent_type": "cg_only",
+      "episode": 1,
+      "success": false,
+      "steps": 86,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "A",
+        "E"
+      ],
+      "guessed_order": [
+        "C",
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1402,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "A",
+        "E"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "condition": "prepilot_S2",
+      "agent_type": "cg_only",
+      "episode": 2,
+      "success": false,
+      "steps": 55,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "D",
+        "C",
+        "A"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1403,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "C",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "condition": "prepilot_S2",
+      "agent_type": "cg_only",
+      "episode": 3,
+      "success": false,
+      "steps": 93,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1404,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "E"
+      ],
+      "rule_required_order": [
+        "A",
+        "E",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "D"
+      ]
+    },
+    {
+      "condition": "prepilot_S2",
+      "agent_type": "cg_only",
+      "episode": 4,
+      "success": false,
+      "steps": 79,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_order": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_seed": 1405,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    }
+  ]
+}

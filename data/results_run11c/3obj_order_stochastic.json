@@ -1,0 +1,2501 @@
+{
+  "run_name": "run11c",
+  "description": "Run 11c: 3-Object ORDER_STOCHASTIC with v2 CG (OBJECT_RELEVANCE_SCREENING) and lowered stochasticity threshold (6.0). Tests Change E (v2 CG) + Change F (lower threshold). 3 cells: A (base_llm), B (cg_only), C (full_cg_db). 15 episodes per cell, 45 total.",
+  "environment": {
+    "num_objects": 5,
+    "n_correct": 3,
+    "activation_probability": 0.7,
+    "max_steps": 100,
+    "condition": "order_stochastic",
+    "rule_type": "order_sensitive_stochastic",
+    "label_randomization": true
+  },
+  "instrumentation": {
+    "temperature": 1.0,
+    "action_model": "claude-sonnet-4-5-20250929",
+    "trigger_model": "claude-haiku-4-5-20251001",
+    "initial_exploration_max_steps": 15,
+    "object_screening_max_steps": 25,
+    "cg_version": "v2"
+  },
+  "cells": [
+    {
+      "label": "A",
+      "agent_type": "base_llm",
+      "episodes": 15,
+      "seeds": "1301-1315",
+      "behavior_version": "N/A",
+      "cg_version": "N/A",
+      "initial_exploration_max_steps": "N/A",
+      "object_screening_max_steps": "N/A"
+    },
+    {
+      "label": "B",
+      "agent_type": "cg_only",
+      "episodes": 15,
+      "seeds": "1301-1315",
+      "behavior_version": "N/A",
+      "cg_version": "v2",
+      "initial_exploration_max_steps": 15,
+      "object_screening_max_steps": 25
+    },
+    {
+      "label": "C",
+      "agent_type": "full_cg_db",
+      "episodes": 15,
+      "seeds": "1301-1315",
+      "behavior_version": "11c",
+      "cg_version": "v2",
+      "initial_exploration_max_steps": 15,
+      "object_screening_max_steps": 25
+    }
+  ],
+  "episode_rules": [
+    {
+      "episode": 0,
+      "rule_seed": 1301,
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "episode": 1,
+      "rule_seed": 1302,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "A",
+        "C"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "episode": 2,
+      "rule_seed": 1303,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "E",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "episode": 3,
+      "rule_seed": 1304,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "episode": 4,
+      "rule_seed": 1305,
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "B",
+        "E",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "episode": 5,
+      "rule_seed": 1306,
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "episode": 6,
+      "rule_seed": 1307,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "B",
+        "C"
+      ],
+      "rule_distractors": [
+        "A",
+        "D"
+      ]
+    },
+    {
+      "episode": 7,
+      "rule_seed": 1308,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    },
+    {
+      "episode": 8,
+      "rule_seed": 1309,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "episode": 9,
+      "rule_seed": 1310,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "rule_distractors": [
+        "D",
+        "E"
+      ]
+    },
+    {
+      "episode": 10,
+      "rule_seed": 1311,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "D"
+      ]
+    },
+    {
+      "episode": 11,
+      "rule_seed": 1312,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "E",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "episode": 12,
+      "rule_seed": 1313,
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "episode": 13,
+      "rule_seed": 1314,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "A",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "E"
+      ]
+    },
+    {
+      "episode": 14,
+      "rule_seed": 1315,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    }
+  ],
+  "gradual_feedback_config": {
+    "enabled": false
+  },
+  "cost_summary": {
+    "total_cost_usd": 125.87406619999999,
+    "episodes_run": 45,
+    "avg_cost_per_episode": 2.797201471111111,
+    "remaining_budget_usd": 24.125933800000013,
+    "episode_costs": [
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 0,
+        "input_tokens": 624048,
+        "output_tokens": 3703,
+        "trigger_tokens": 0,
+        "cost_usd": 1.927689,
+        "cumulative_cost_usd": 1.927689
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 1,
+        "input_tokens": 897800,
+        "output_tokens": 3236,
+        "trigger_tokens": 0,
+        "cost_usd": 2.74194,
+        "cumulative_cost_usd": 4.6696290000000005
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 2,
+        "input_tokens": 830124,
+        "output_tokens": 3612,
+        "trigger_tokens": 0,
+        "cost_usd": 2.5445520000000004,
+        "cumulative_cost_usd": 7.214181000000001
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 3,
+        "input_tokens": 816822,
+        "output_tokens": 3562,
+        "trigger_tokens": 0,
+        "cost_usd": 2.503896,
+        "cumulative_cost_usd": 9.718077000000001
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 4,
+        "input_tokens": 820977,
+        "output_tokens": 3702,
+        "trigger_tokens": 0,
+        "cost_usd": 2.5184610000000003,
+        "cumulative_cost_usd": 12.236538000000001
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 5,
+        "input_tokens": 804118,
+        "output_tokens": 4216,
+        "trigger_tokens": 0,
+        "cost_usd": 2.475594,
+        "cumulative_cost_usd": 14.712132
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 6,
+        "input_tokens": 879119,
+        "output_tokens": 3562,
+        "trigger_tokens": 0,
+        "cost_usd": 2.6907870000000003,
+        "cumulative_cost_usd": 17.402919
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 7,
+        "input_tokens": 699021,
+        "output_tokens": 3214,
+        "trigger_tokens": 0,
+        "cost_usd": 2.145273,
+        "cumulative_cost_usd": 19.548192
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 8,
+        "input_tokens": 876285,
+        "output_tokens": 4329,
+        "trigger_tokens": 0,
+        "cost_usd": 2.6937900000000004,
+        "cumulative_cost_usd": 22.241982
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 9,
+        "input_tokens": 805104,
+        "output_tokens": 3929,
+        "trigger_tokens": 0,
+        "cost_usd": 2.474247,
+        "cumulative_cost_usd": 24.716229
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 10,
+        "input_tokens": 685590,
+        "output_tokens": 3730,
+        "trigger_tokens": 0,
+        "cost_usd": 2.1127200000000004,
+        "cumulative_cost_usd": 26.828948999999998
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 11,
+        "input_tokens": 816680,
+        "output_tokens": 3600,
+        "trigger_tokens": 0,
+        "cost_usd": 2.50404,
+        "cumulative_cost_usd": 29.332988999999998
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 12,
+        "input_tokens": 287527,
+        "output_tokens": 2124,
+        "trigger_tokens": 0,
+        "cost_usd": 0.894441,
+        "cumulative_cost_usd": 30.22743
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 13,
+        "input_tokens": 811501,
+        "output_tokens": 3182,
+        "trigger_tokens": 0,
+        "cost_usd": 2.482233,
+        "cumulative_cost_usd": 32.709663
+      },
+      {
+        "condition": "3obj_order_stoch_A",
+        "agent": "base_llm",
+        "episode": 14,
+        "input_tokens": 845833,
+        "output_tokens": 3555,
+        "trigger_tokens": 0,
+        "cost_usd": 2.590824,
+        "cumulative_cost_usd": 35.300487
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 0,
+        "input_tokens": 629231,
+        "output_tokens": 5897,
+        "trigger_tokens": 0,
+        "cost_usd": 1.976148,
+        "cumulative_cost_usd": 37.276635
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 1,
+        "input_tokens": 1004358,
+        "output_tokens": 6043,
+        "trigger_tokens": 0,
+        "cost_usd": 3.103719,
+        "cumulative_cost_usd": 40.380354
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 2,
+        "input_tokens": 1049592,
+        "output_tokens": 6582,
+        "trigger_tokens": 0,
+        "cost_usd": 3.2475060000000004,
+        "cumulative_cost_usd": 43.62786
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 3,
+        "input_tokens": 1170484,
+        "output_tokens": 9205,
+        "trigger_tokens": 0,
+        "cost_usd": 3.6495270000000004,
+        "cumulative_cost_usd": 47.277387
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 4,
+        "input_tokens": 1159809,
+        "output_tokens": 6766,
+        "trigger_tokens": 0,
+        "cost_usd": 3.5809170000000003,
+        "cumulative_cost_usd": 50.858304
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 5,
+        "input_tokens": 1032416,
+        "output_tokens": 6976,
+        "trigger_tokens": 0,
+        "cost_usd": 3.201888,
+        "cumulative_cost_usd": 54.060191999999994
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 6,
+        "input_tokens": 1127680,
+        "output_tokens": 6253,
+        "trigger_tokens": 0,
+        "cost_usd": 3.4768350000000003,
+        "cumulative_cost_usd": 57.537026999999995
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 7,
+        "input_tokens": 1167443,
+        "output_tokens": 7354,
+        "trigger_tokens": 0,
+        "cost_usd": 3.612639,
+        "cumulative_cost_usd": 61.149665999999996
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 8,
+        "input_tokens": 894213,
+        "output_tokens": 6987,
+        "trigger_tokens": 0,
+        "cost_usd": 2.787444,
+        "cumulative_cost_usd": 63.93711
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 9,
+        "input_tokens": 1011185,
+        "output_tokens": 5926,
+        "trigger_tokens": 0,
+        "cost_usd": 3.1224450000000004,
+        "cumulative_cost_usd": 67.059555
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 10,
+        "input_tokens": 620066,
+        "output_tokens": 5937,
+        "trigger_tokens": 0,
+        "cost_usd": 1.9492530000000001,
+        "cumulative_cost_usd": 69.008808
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 11,
+        "input_tokens": 806592,
+        "output_tokens": 6949,
+        "trigger_tokens": 0,
+        "cost_usd": 2.5240110000000002,
+        "cumulative_cost_usd": 71.532819
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 12,
+        "input_tokens": 557551,
+        "output_tokens": 4772,
+        "trigger_tokens": 0,
+        "cost_usd": 1.744233,
+        "cumulative_cost_usd": 73.277052
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 13,
+        "input_tokens": 999590,
+        "output_tokens": 6037,
+        "trigger_tokens": 0,
+        "cost_usd": 3.089325,
+        "cumulative_cost_usd": 76.366377
+      },
+      {
+        "condition": "3obj_order_stoch_B",
+        "agent": "cg_only",
+        "episode": 14,
+        "input_tokens": 1092033,
+        "output_tokens": 7106,
+        "trigger_tokens": 0,
+        "cost_usd": 3.382689,
+        "cumulative_cost_usd": 79.749066
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 0,
+        "input_tokens": 677068,
+        "output_tokens": 5757,
+        "trigger_tokens": 25846,
+        "cost_usd": 2.1382358000000004,
+        "cumulative_cost_usd": 81.8873018
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 1,
+        "input_tokens": 807370,
+        "output_tokens": 5500,
+        "trigger_tokens": 89099,
+        "cost_usd": 2.5758892,
+        "cumulative_cost_usd": 84.46319100000001
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 2,
+        "input_tokens": 982170,
+        "output_tokens": 6356,
+        "trigger_tokens": 71606,
+        "cost_usd": 3.0991348000000003,
+        "cumulative_cost_usd": 87.56232580000001
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 3,
+        "input_tokens": 1113067,
+        "output_tokens": 6961,
+        "trigger_tokens": 95032,
+        "cost_usd": 3.5196416,
+        "cumulative_cost_usd": 91.08196740000001
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 4,
+        "input_tokens": 1148168,
+        "output_tokens": 7432,
+        "trigger_tokens": 110786,
+        "cost_usd": 3.6446128,
+        "cumulative_cost_usd": 94.72658020000001
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 5,
+        "input_tokens": 857932,
+        "output_tokens": 6446,
+        "trigger_tokens": 45199,
+        "cost_usd": 2.7066452000000005,
+        "cumulative_cost_usd": 97.43322540000001
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 6,
+        "input_tokens": 996439,
+        "output_tokens": 6481,
+        "trigger_tokens": 88298,
+        "cost_usd": 3.1571704,
+        "cumulative_cost_usd": 100.59039580000001
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 7,
+        "input_tokens": 1046496,
+        "output_tokens": 7709,
+        "trigger_tokens": 28513,
+        "cost_usd": 3.2779334,
+        "cumulative_cost_usd": 103.8683292
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 8,
+        "input_tokens": 846094,
+        "output_tokens": 6433,
+        "trigger_tokens": 23012,
+        "cost_usd": 2.6531866,
+        "cumulative_cost_usd": 106.5215158
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 9,
+        "input_tokens": 1107688,
+        "output_tokens": 7006,
+        "trigger_tokens": 106745,
+        "cost_usd": 3.51355,
+        "cumulative_cost_usd": 110.0350658
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 10,
+        "input_tokens": 806130,
+        "output_tokens": 5226,
+        "trigger_tokens": 29886,
+        "cost_usd": 2.5206888000000003,
+        "cumulative_cost_usd": 112.5557546
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 11,
+        "input_tokens": 1054297,
+        "output_tokens": 6635,
+        "trigger_tokens": 49047,
+        "cost_usd": 3.3016536,
+        "cumulative_cost_usd": 115.8574082
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 12,
+        "input_tokens": 1023178,
+        "output_tokens": 6140,
+        "trigger_tokens": 37660,
+        "cost_usd": 3.1917619999999998,
+        "cumulative_cost_usd": 119.04917019999999
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 13,
+        "input_tokens": 1065265,
+        "output_tokens": 6172,
+        "trigger_tokens": 44759,
+        "cost_usd": 3.3241821999999996,
+        "cumulative_cost_usd": 122.37335239999999
+      },
+      {
+        "condition": "3obj_order_stoch_C",
+        "agent": "full_cg_db",
+        "episode": 14,
+        "input_tokens": 1111399,
+        "output_tokens": 6532,
+        "trigger_tokens": 85671,
+        "cost_usd": 3.5007138,
+        "cumulative_cost_usd": 125.87406619999999
+      }
+    ]
+  },
+  "results": [
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 0,
+      "success": true,
+      "steps": 80,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1301,
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 1,
+      "success": false,
+      "steps": 99,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "D",
+        "A",
+        "C"
+      ],
+      "guessed_order": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_seed": 1302,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "A",
+        "C"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 2,
+      "success": false,
+      "steps": 94,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "C",
+        "E",
+        "D"
+      ],
+      "guessed_order": [
+        "C",
+        "E",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1303,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "E",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 3,
+      "success": false,
+      "steps": 92,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1304,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 4,
+      "success": false,
+      "steps": 92,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1305,
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "B",
+        "E",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 5,
+      "success": false,
+      "steps": 92,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1306,
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 6,
+      "success": false,
+      "steps": 96,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1307,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "B",
+        "C"
+      ],
+      "rule_distractors": [
+        "A",
+        "D"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 7,
+      "success": true,
+      "steps": 86,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_seed": 1308,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 8,
+      "success": false,
+      "steps": 94,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1309,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 9,
+      "success": false,
+      "steps": 90,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1310,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "rule_distractors": [
+        "D",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 10,
+      "success": false,
+      "steps": 83,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "C",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "C",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1311,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "D"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 11,
+      "success": false,
+      "steps": 92,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1312,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "E",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 12,
+      "success": false,
+      "steps": 54,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1313,
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 13,
+      "success": false,
+      "steps": 92,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1314,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "A",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_A",
+      "agent_type": "base_llm",
+      "episode": 14,
+      "success": false,
+      "steps": 93,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1315,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 0,
+      "success": true,
+      "steps": 72,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1301,
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 1,
+      "success": false,
+      "steps": 94,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1302,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "A",
+        "C"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 2,
+      "success": false,
+      "steps": 97,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "E",
+        "D"
+      ],
+      "guessed_order": null,
+      "guessed_rule_type": "conjunctive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1303,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "E",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 3,
+      "success": false,
+      "steps": 96,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1304,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 4,
+      "success": false,
+      "steps": 100,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1305,
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "B",
+        "E",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 5,
+      "success": false,
+      "steps": 95,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_order": [
+        "D",
+        "E",
+        "C",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1306,
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 6,
+      "success": false,
+      "steps": 100,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1307,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "B",
+        "C"
+      ],
+      "rule_distractors": [
+        "A",
+        "D"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 7,
+      "success": false,
+      "steps": 100,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1308,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 8,
+      "success": true,
+      "steps": 86,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1309,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 9,
+      "success": false,
+      "steps": 94,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1310,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "rule_distractors": [
+        "D",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 10,
+      "success": false,
+      "steps": 71,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "C",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "C",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1311,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "D"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 11,
+      "success": false,
+      "steps": 82,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "E",
+        "A"
+      ],
+      "guessed_order": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1312,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "E",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 12,
+      "success": false,
+      "steps": 69,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "C",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1313,
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 13,
+      "success": true,
+      "steps": 96,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "D",
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "D",
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_seed": 1314,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "A",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_B",
+      "agent_type": "cg_only",
+      "episode": 14,
+      "success": false,
+      "steps": 96,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1315,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 0,
+      "success": false,
+      "steps": 74,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1301,
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 1,
+      "success": false,
+      "steps": 84,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "D",
+        "A",
+        "C"
+      ],
+      "guessed_order": [
+        "B",
+        "D",
+        "E",
+        "A",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1302,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "A",
+        "C"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 2,
+      "success": false,
+      "steps": 92,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "E",
+        "D"
+      ],
+      "guessed_order": [
+        "A",
+        "C",
+        "E",
+        "B",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1303,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "E",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 3,
+      "success": false,
+      "steps": 98,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "C",
+        "D"
+      ],
+      "guessed_order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rule_seed": 1304,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 4,
+      "success": false,
+      "steps": 97,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1305,
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "B",
+        "E",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 5,
+      "success": true,
+      "steps": 84,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1306,
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 6,
+      "success": false,
+      "steps": 94,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "B",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1307,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "B",
+        "C"
+      ],
+      "rule_distractors": [
+        "A",
+        "D"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 7,
+      "success": false,
+      "steps": 91,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_order": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_seed": 1308,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 8,
+      "success": false,
+      "steps": 80,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1309,
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 9,
+      "success": false,
+      "steps": 98,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1310,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rule_required_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "rule_distractors": [
+        "D",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 10,
+      "success": false,
+      "steps": 83,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "C",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "C",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1311,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "D"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 11,
+      "success": false,
+      "steps": 94,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "E",
+        "A"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1312,
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "E",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 12,
+      "success": false,
+      "steps": 93,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "B",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1313,
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 13,
+      "success": false,
+      "steps": 96,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "D",
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "D",
+        "C",
+        "E",
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rule_seed": 1314,
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "A",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "E"
+      ]
+    },
+    {
+      "condition": "3obj_order_stoch_C",
+      "agent_type": "full_cg_db",
+      "episode": 14,
+      "success": false,
+      "steps": 96,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "rule_seed": 1315,
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ]
+    }
+  ]
+}

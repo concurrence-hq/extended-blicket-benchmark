@@ -1,0 +1,474 @@
+{
+  "result": {
+    "condition": "disjunctive",
+    "agent_type": "cg_only",
+    "episode_number": 16,
+    "success": true,
+    "answer_submitted": true,
+    "steps_taken": 10,
+    "rule_type_correct": true,
+    "objects_correct": true,
+    "true_rule_type": "disjunctive",
+    "true_objects": [
+      "A",
+      "B"
+    ],
+    "guessed_rule_type": "disjunctive",
+    "guessed_objects": [
+      "A",
+      "B"
+    ],
+    "total_input_tokens": 17705,
+    "total_output_tokens": 1310,
+    "trigger_tokens": 0,
+    "parse_failures": 0,
+    "wall_time_seconds": 37.57663822174072,
+    "error": null
+  },
+  "steps": [
+    {
+      "step": 0,
+      "action": "place_a",
+      "action_valid": true,
+      "objects_on_detector": [
+        "A"
+      ],
+      "detector_active": true,
+      "detector_changed": true,
+      "observation_text": "You placed object A on the detector. The detector is now ACTIVE (glowing).",
+      "cg_state": "INITIAL_EXPLORATION",
+      "db_notifications": []
+    },
+    {
+      "step": 1,
+      "action": "remove_a",
+      "action_valid": true,
+      "objects_on_detector": [],
+      "detector_active": false,
+      "detector_changed": true,
+      "observation_text": "You removed object A from the detector. The detector is now INACTIVE (not glowing).",
+      "cg_state": "INITIAL_EXPLORATION",
+      "db_notifications": []
+    },
+    {
+      "step": 2,
+      "action": "place_b",
+      "action_valid": true,
+      "objects_on_detector": [
+        "B"
+      ],
+      "detector_active": true,
+      "detector_changed": true,
+      "observation_text": "You placed object B on the detector. The detector is now ACTIVE (glowing).",
+      "cg_state": "INITIAL_EXPLORATION",
+      "db_notifications": []
+    },
+    {
+      "step": 3,
+      "action": "remove_b",
+      "action_valid": true,
+      "objects_on_detector": [],
+      "detector_active": false,
+      "detector_changed": true,
+      "observation_text": "You removed object B from the detector. The detector is now INACTIVE (not glowing).",
+      "cg_state": "INITIAL_EXPLORATION",
+      "db_notifications": []
+    },
+    {
+      "step": 4,
+      "action": "place_c",
+      "action_valid": true,
+      "objects_on_detector": [
+        "C"
+      ],
+      "detector_active": false,
+      "detector_changed": false,
+      "observation_text": "You placed object C on the detector. The detector remains INACTIVE (not glowing).",
+      "cg_state": "INITIAL_EXPLORATION",
+      "db_notifications": []
+    },
+    {
+      "step": 5,
+      "action": "remove_c",
+      "action_valid": true,
+      "objects_on_detector": [],
+      "detector_active": false,
+      "detector_changed": false,
+      "observation_text": "You removed object C from the detector. The detector remains INACTIVE (not glowing).",
+      "cg_state": "COMBINATION_TESTING",
+      "db_notifications": []
+    },
+    {
+      "step": 6,
+      "action": "place_a",
+      "action_valid": true,
+      "objects_on_detector": [
+        "A"
+      ],
+      "detector_active": true,
+      "detector_changed": true,
+      "observation_text": "You placed object A on the detector. The detector is now ACTIVE (glowing).",
+      "cg_state": "COMBINATION_TESTING",
+      "db_notifications": []
+    },
+    {
+      "step": 7,
+      "action": "place_b",
+      "action_valid": true,
+      "objects_on_detector": [
+        "A",
+        "B"
+      ],
+      "detector_active": true,
+      "detector_changed": false,
+      "observation_text": "You placed object B on the detector. The detector remains ACTIVE (glowing).",
+      "cg_state": "COMBINATION_TESTING",
+      "db_notifications": []
+    },
+    {
+      "step": 8,
+      "action": "place_c",
+      "action_valid": true,
+      "objects_on_detector": [
+        "A",
+        "B",
+        "C"
+      ],
+      "detector_active": true,
+      "detector_changed": false,
+      "observation_text": "You placed object C on the detector. The detector remains ACTIVE (glowing).",
+      "cg_state": "HYPOTHESIS_EVALUATION",
+      "db_notifications": []
+    },
+    {
+      "step": 9,
+      "action": "check",
+      "action_valid": true,
+      "objects_on_detector": [
+        "A",
+        "B",
+        "C"
+      ],
+      "detector_active": true,
+      "detector_changed": false,
+      "observation_text": "You decided to check your answer.",
+      "cg_state": "VERIFICATION",
+      "db_notifications": []
+    }
+  ],
+  "agent_trace": {
+    "agent_type": "cg_only",
+    "model": "claude-sonnet-4-5-20250929",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: (none)\nDetector: INACTIVE (not glowing)\nSteps taken: 0/50\n\nAvailable actions:\n  1. Place object A on detector\n  2. Place object B on detector\n  3. Place object C on detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: I'm starting the investigation with a clean detector. According to my current state's guidelines, I need to test each object individually to observe baseline responses. This will help me determine which objects might be blickets. I'll start with object A, then systematically test B and C.\n\nACTION: 1"
+      },
+      {
+        "role": "user",
+        "content": "You placed object A on the detector. The detector is now ACTIVE (glowing)."
+      },
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: A\nDetector: ACTIVE (glowing)\nSteps taken: 1/50\n\nAvailable actions:\n  1. Place object B on detector\n  2. Place object C on detector\n  3. Remove object A from detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: Object A activates the detector on its own, which means A is definitely a blicket. Now I need to clear the detector and test B individually to get a clean baseline reading for that object.\n\nACTION: 3"
+      },
+      {
+        "role": "user",
+        "content": "You removed object A from the detector. The detector is now INACTIVE (not glowing)."
+      },
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: (none)\nDetector: INACTIVE (not glowing)\nSteps taken: 2/50\n\nAvailable actions:\n  1. Place object A on detector\n  2. Place object B on detector\n  3. Place object C on detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: Good, the detector is clear. I've confirmed A is a blicket (activates detector alone). Now I need to test object B individually to see if it's also a blicket.\n\nACTION: 2"
+      },
+      {
+        "role": "user",
+        "content": "You placed object B on the detector. The detector is now ACTIVE (glowing)."
+      },
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: B\nDetector: ACTIVE (glowing)\nSteps taken: 3/50\n\nAvailable actions:\n  1. Place object A on detector\n  2. Place object C on detector\n  3. Remove object B from detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: Excellent! Object B also activates the detector on its own, so B is also a blicket. Now I need to clear the detector and test object C individually to complete my baseline testing of all three objects.\n\nACTION: 3"
+      },
+      {
+        "role": "user",
+        "content": "You removed object B from the detector. The detector is now INACTIVE (not glowing)."
+      },
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: (none)\nDetector: INACTIVE (not glowing)\nSteps taken: 4/50\n\nAvailable actions:\n  1. Place object A on detector\n  2. Place object B on detector\n  3. Place object C on detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: The detector is clear again. I've confirmed both A and B are blickets (each activates the detector individually). Now I need to test object C to complete the individual baseline testing phase.\n\nACTION: 3"
+      },
+      {
+        "role": "user",
+        "content": "You placed object C on the detector. The detector remains INACTIVE (not glowing)."
+      },
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: C\nDetector: INACTIVE (not glowing)\nSteps taken: 5/50\n\nAvailable actions:\n  1. Place object A on detector\n  2. Place object B on detector\n  3. Remove object C from detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: COMBINATION_TESTING\n\nREASONING: Perfect! I've completed the individual baseline testing:\n- Object A: activates detector \u2192 A is a blicket\n- Object B: activates detector \u2192 B is a blicket  \n- Object C: does NOT activate detector \u2192 C is NOT a blicket\n\nSince both A and B individually activate the detector, this strongly suggests a DISJUNCTIVE rule (any single blicket activates it). However, I should test some combinations to confirm this and rule out the conjunctive possibility. According to my context graph, I should now transition to COMBINATION_TESTING to verify the rule type through combination tests.\n\nACTION: 3"
+      },
+      {
+        "role": "user",
+        "content": "You removed object C from the detector. The detector remains INACTIVE (not glowing)."
+      },
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: (none)\nDetector: INACTIVE (not glowing)\nSteps taken: 6/50\n\nAvailable actions:\n  1. Place object A on detector\n  2. Place object B on detector\n  3. Place object C on detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: COMBINATION_TESTING\nTRANSITION: None (continuing in current state)\n\nREASONING: Now I'm in the combination testing phase. I have strong evidence that A and B are blickets, and C is not. To confirm the rule type:\n- If DISJUNCTIVE: A+B together should activate (since either one alone activates)\n- If CONJUNCTIVE: This would be inconsistent with individual activations\n\nLet me test A+B together to verify the disjunctive rule. I'll place A first, then add B.\n\nACTION: 1"
+      },
+      {
+        "role": "user",
+        "content": "You placed object A on the detector. The detector is now ACTIVE (glowing)."
+      },
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: A\nDetector: ACTIVE (glowing)\nSteps taken: 7/50\n\nAvailable actions:\n  1. Place object B on detector\n  2. Place object C on detector\n  3. Remove object A from detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: COMBINATION_TESTING\nTRANSITION: None (continuing in current state)\n\nREASONING: A is on the detector and it's active (as expected). Now I'll add B to test the A+B combination. If the rule is disjunctive, it should remain active. If somehow it turns off, that would indicate something unusual about the interaction.\n\nACTION: 1"
+      },
+      {
+        "role": "user",
+        "content": "You placed object B on the detector. The detector remains ACTIVE (glowing)."
+      },
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: A, B\nDetector: ACTIVE (glowing)\nSteps taken: 8/50\n\nAvailable actions:\n  1. Place object C on detector\n  2. Remove object A from detector\n  3. Remove object B from detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: COMBINATION_TESTING\nTRANSITION: HYPOTHESIS_EVALUATION\n\nREASONING: Perfect! A+B together keeps the detector active, which is consistent with a disjunctive rule. Let me verify my findings:\n\nIndividual tests:\n- A alone: ACTIVE \u2192 A is a blicket\n- B alone: ACTIVE \u2192 B is a blicket\n- C alone: INACTIVE \u2192 C is NOT a blicket\n\nCombination test:\n- A+B together: ACTIVE \u2192 Consistent with disjunctive rule\n\nThe evidence strongly points to:\n- Blickets: A and B\n- Rule: DISJUNCTIVE (any single blicket activates the detector)\n\nI could test A+C or B+C to be thorough, but since C is not a blicket, adding it to a blicket should keep the detector active under a disjunctive rule. Let me do one more quick verification test with A+B+C to be absolutely certain before submitting.\n\nACTION: 1"
+      },
+      {
+        "role": "user",
+        "content": "You placed object C on the detector. The detector remains ACTIVE (glowing)."
+      },
+      {
+        "role": "user",
+        "content": "=== Blicket Detector Status ===\nObjects on detector: A, B, C\nDetector: ACTIVE (glowing)\nSteps taken: 9/50\n\nAvailable actions:\n  1. Remove object A from detector\n  2. Remove object B from detector\n  3. Remove object C from detector\n  4. Submit your answer\n\nChoose an action by number or name. When ready to answer, choose 'Submit your answer'."
+      },
+      {
+        "role": "assistant",
+        "content": "CG_STATE: HYPOTHESIS_EVALUATION\nTRANSITION: VERIFICATION\n\nREASONING: Excellent! Now I have comprehensive evidence:\n\n**Evidence Summary:**\n1. A alone: ACTIVE \u2192 A is a blicket\n2. B alone: ACTIVE \u2192 B is a blicket\n3. C alone: INACTIVE \u2192 C is NOT a blicket\n4. A+B: ACTIVE (expected - both are blickets)\n5. A+B+C: ACTIVE (C doesn't interfere)\n\n**Rule Type Analysis:**\n- DISJUNCTIVE evidence: Each blicket (A or B) individually activates the detector. This is the defining characteristic of a disjunctive rule - ANY single blicket is sufficient.\n- CONJUNCTIVE contradiction: If the rule were conjunctive, A alone and B alone would NOT activate the detector (all blickets would need to be present). But they do activate individually, so this is definitely NOT conjunctive.\n\n**Conclusion:**\n- Blickets: A and B\n- Non-blicket: C\n- Rule: DISJUNCTIVE\n\nI'm highly confident in this answer. Transitioning to VERIFICATION state to finalize.\n\nACTION: 4"
+      },
+      {
+        "role": "user",
+        "content": "You decided to check your answer."
+      },
+      {
+        "role": "user",
+        "content": "You chose to submit your answer. Please provide your conclusion.\n\nRespond with:\nRULE_TYPE: conjunctive OR disjunctive\nBLICKETS: <comma-separated list of blicket objects, e.g. A, B>"
+      },
+      {
+        "role": "assistant",
+        "content": "RULE_TYPE: disjunctive\nBLICKETS: A, B"
+      }
+    ],
+    "raw_responses": [
+      "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: I'm starting the investigation with a clean detector. According to my current state's guidelines, I need to test each object individually to observe baseline responses. This will help me determine which objects might be blickets. I'll start with object A, then systematically test B and C.\n\nACTION: 1",
+      "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: Object A activates the detector on its own, which means A is definitely a blicket. Now I need to clear the detector and test B individually to get a clean baseline reading for that object.\n\nACTION: 3",
+      "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: Good, the detector is clear. I've confirmed A is a blicket (activates detector alone). Now I need to test object B individually to see if it's also a blicket.\n\nACTION: 2",
+      "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: Excellent! Object B also activates the detector on its own, so B is also a blicket. Now I need to clear the detector and test object C individually to complete my baseline testing of all three objects.\n\nACTION: 3",
+      "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: None (continuing in current state)\n\nREASONING: The detector is clear again. I've confirmed both A and B are blickets (each activates the detector individually). Now I need to test object C to complete the individual baseline testing phase.\n\nACTION: 3",
+      "CG_STATE: INITIAL_EXPLORATION\nTRANSITION: COMBINATION_TESTING\n\nREASONING: Perfect! I've completed the individual baseline testing:\n- Object A: activates detector \u2192 A is a blicket\n- Object B: activates detector \u2192 B is a blicket  \n- Object C: does NOT activate detector \u2192 C is NOT a blicket\n\nSince both A and B individually activate the detector, this strongly suggests a DISJUNCTIVE rule (any single blicket activates it). However, I should test some combinations to confirm this and rule out the conjunctive possibility. According to my context graph, I should now transition to COMBINATION_TESTING to verify the rule type through combination tests.\n\nACTION: 3",
+      "CG_STATE: COMBINATION_TESTING\nTRANSITION: None (continuing in current state)\n\nREASONING: Now I'm in the combination testing phase. I have strong evidence that A and B are blickets, and C is not. To confirm the rule type:\n- If DISJUNCTIVE: A+B together should activate (since either one alone activates)\n- If CONJUNCTIVE: This would be inconsistent with individual activations\n\nLet me test A+B together to verify the disjunctive rule. I'll place A first, then add B.\n\nACTION: 1",
+      "CG_STATE: COMBINATION_TESTING\nTRANSITION: None (continuing in current state)\n\nREASONING: A is on the detector and it's active (as expected). Now I'll add B to test the A+B combination. If the rule is disjunctive, it should remain active. If somehow it turns off, that would indicate something unusual about the interaction.\n\nACTION: 1",
+      "CG_STATE: COMBINATION_TESTING\nTRANSITION: HYPOTHESIS_EVALUATION\n\nREASONING: Perfect! A+B together keeps the detector active, which is consistent with a disjunctive rule. Let me verify my findings:\n\nIndividual tests:\n- A alone: ACTIVE \u2192 A is a blicket\n- B alone: ACTIVE \u2192 B is a blicket\n- C alone: INACTIVE \u2192 C is NOT a blicket\n\nCombination test:\n- A+B together: ACTIVE \u2192 Consistent with disjunctive rule\n\nThe evidence strongly points to:\n- Blickets: A and B\n- Rule: DISJUNCTIVE (any single blicket activates the detector)\n\nI could test A+C or B+C to be thorough, but since C is not a blicket, adding it to a blicket should keep the detector active under a disjunctive rule. Let me do one more quick verification test with A+B+C to be absolutely certain before submitting.\n\nACTION: 1",
+      "CG_STATE: HYPOTHESIS_EVALUATION\nTRANSITION: VERIFICATION\n\nREASONING: Excellent! Now I have comprehensive evidence:\n\n**Evidence Summary:**\n1. A alone: ACTIVE \u2192 A is a blicket\n2. B alone: ACTIVE \u2192 B is a blicket\n3. C alone: INACTIVE \u2192 C is NOT a blicket\n4. A+B: ACTIVE (expected - both are blickets)\n5. A+B+C: ACTIVE (C doesn't interfere)\n\n**Rule Type Analysis:**\n- DISJUNCTIVE evidence: Each blicket (A or B) individually activates the detector. This is the defining characteristic of a disjunctive rule - ANY single blicket is sufficient.\n- CONJUNCTIVE contradiction: If the rule were conjunctive, A alone and B alone would NOT activate the detector (all blickets would need to be present). But they do activate individually, so this is definitely NOT conjunctive.\n\n**Conclusion:**\n- Blickets: A and B\n- Non-blicket: C\n- Rule: DISJUNCTIVE\n\nI'm highly confident in this answer. Transitioning to VERIFICATION state to finalize.\n\nACTION: 4",
+      "RULE_TYPE: disjunctive\nBLICKETS: A, B"
+    ],
+    "token_usage": {
+      "input_tokens": 17705,
+      "output_tokens": 1310,
+      "total_tokens": 19015
+    },
+    "context_graph_final": {
+      "states": {
+        "INITIAL_EXPLORATION": {
+          "name": "INITIAL_EXPLORATION",
+          "state_type": "CGStateType.ACTION",
+          "objective": "Place individual objects to observe baseline detector responses.",
+          "guidelines": [
+            "Test each object (A, B, C) individually",
+            "Record which objects alone activate the detector",
+            "Clear the detector between tests for clean observations"
+          ],
+          "tools": [],
+          "transitions": [
+            {
+              "target": "COMBINATION_TESTING",
+              "condition": "After testing all 3 individual objects"
+            }
+          ]
+        },
+        "COMBINATION_TESTING": {
+          "name": "COMBINATION_TESTING",
+          "state_type": "CGStateType.ACTION",
+          "objective": "Test object combinations to identify interaction effects.",
+          "guidelines": [
+            "Test pairs: AB, AC, BC",
+            "Test all three: ABC",
+            "Compare combined results to individual results",
+            "Note which combinations change the detector state"
+          ],
+          "tools": [],
+          "transitions": [
+            {
+              "target": "HYPOTHESIS_EVALUATION",
+              "condition": "After testing key combinations"
+            },
+            {
+              "target": "INITIAL_EXPLORATION",
+              "condition": "If results are confusing, go back to singles"
+            }
+          ]
+        },
+        "HYPOTHESIS_EVALUATION": {
+          "name": "HYPOTHESIS_EVALUATION",
+          "state_type": "CGStateType.REFLECTION",
+          "objective": "Evaluate evidence to determine rule type and blickets.",
+          "guidelines": [
+            "Consider: does each blicket alone activate? (disjunctive)",
+            "Consider: are all blickets needed together? (conjunctive)",
+            "List evidence for and against each hypothesis",
+            "Identify any remaining ambiguities"
+          ],
+          "tools": [],
+          "transitions": [
+            {
+              "target": "VERIFICATION",
+              "condition": "When you have a clear hypothesis"
+            },
+            {
+              "target": "COMBINATION_TESTING",
+              "condition": "If hypothesis is unclear, test more combinations"
+            }
+          ]
+        },
+        "VERIFICATION": {
+          "name": "VERIFICATION",
+          "state_type": "CGStateType.DECISION",
+          "objective": "Run confirming tests and submit your answer.",
+          "guidelines": [
+            "Design a test that would distinguish your hypothesis from alternatives",
+            "Run the confirming test",
+            "If confirmed, submit your answer",
+            "If disconfirmed, return to hypothesis evaluation"
+          ],
+          "tools": [],
+          "transitions": [
+            {
+              "target": "HYPOTHESIS_EVALUATION",
+              "condition": "If verification fails"
+            }
+          ]
+        }
+      },
+      "current_state": "VERIFICATION",
+      "modification_log": []
+    },
+    "transition_log": [
+      {
+        "step": 0,
+        "from": "INITIAL_EXPLORATION",
+        "to": "NONE",
+        "success": false
+      },
+      {
+        "step": 1,
+        "from": "INITIAL_EXPLORATION",
+        "to": "NONE",
+        "success": false
+      },
+      {
+        "step": 2,
+        "from": "INITIAL_EXPLORATION",
+        "to": "NONE",
+        "success": false
+      },
+      {
+        "step": 3,
+        "from": "INITIAL_EXPLORATION",
+        "to": "NONE",
+        "success": false
+      },
+      {
+        "step": 4,
+        "from": "INITIAL_EXPLORATION",
+        "to": "NONE",
+        "success": false
+      },
+      {
+        "step": 5,
+        "from": "INITIAL_EXPLORATION",
+        "to": "COMBINATION_TESTING",
+        "success": true
+      },
+      {
+        "step": 6,
+        "from": "COMBINATION_TESTING",
+        "to": "NONE",
+        "success": false
+      },
+      {
+        "step": 7,
+        "from": "COMBINATION_TESTING",
+        "to": "NONE",
+        "success": false
+      },
+      {
+        "step": 8,
+        "from": "COMBINATION_TESTING",
+        "to": "HYPOTHESIS_EVALUATION",
+        "success": true
+      },
+      {
+        "step": 9,
+        "from": "HYPOTHESIS_EVALUATION",
+        "to": "VERIFICATION",
+        "success": true
+      }
+    ]
+  },
+  "env_info": {
+    "rule_type": "disjunctive",
+    "required_objects": [
+      "A",
+      "B"
+    ],
+    "max_steps": 50,
+    "step_count": 10,
+    "done": true,
+    "objects_on_detector": [
+      "A",
+      "B",
+      "C"
+    ],
+    "detector_active": true
+  }
+}

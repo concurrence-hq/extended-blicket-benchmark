@@ -1,0 +1,2660 @@
+{
+  "run_name": "run10e",
+  "session": 2,
+  "description": "Run 10e Session 2: Stability calibration (CAL: base_llm, 3-obj, 40 steps, seeds 2001-2010) + 4-object signal check (Cell A: base_llm, Cell B: full_cg_db, 4-obj, 75 steps, seeds 1401-1410). Instrumented: temperature=1.0 pinned, API response metadata logged.",
+  "instrumentation": {
+    "temperature": 1.0,
+    "action_model": "claude-sonnet-4-5-20250929",
+    "trigger_model": "claude-haiku-4-5-20251001"
+  },
+  "calibration": {
+    "num_objects": 5,
+    "n_correct": 3,
+    "max_steps": 40,
+    "episodes": 10,
+    "base_seed": 2001,
+    "agent_type": "base_llm",
+    "episode_rules": [
+      {
+        "episode": 0,
+        "rule_seed": 2001,
+        "rule_correct_objects": [
+          "A",
+          "B",
+          "E"
+        ],
+        "rule_required_order": [
+          "A",
+          "B",
+          "E"
+        ],
+        "rule_distractors": [
+          "C",
+          "D"
+        ]
+      },
+      {
+        "episode": 1,
+        "rule_seed": 2002,
+        "rule_correct_objects": [
+          "A",
+          "C",
+          "D"
+        ],
+        "rule_required_order": [
+          "C",
+          "A",
+          "D"
+        ],
+        "rule_distractors": [
+          "B",
+          "E"
+        ]
+      },
+      {
+        "episode": 2,
+        "rule_seed": 2003,
+        "rule_correct_objects": [
+          "A",
+          "B",
+          "D"
+        ],
+        "rule_required_order": [
+          "A",
+          "D",
+          "B"
+        ],
+        "rule_distractors": [
+          "C",
+          "E"
+        ]
+      },
+      {
+        "episode": 3,
+        "rule_seed": 2004,
+        "rule_correct_objects": [
+          "A",
+          "C",
+          "E"
+        ],
+        "rule_required_order": [
+          "C",
+          "A",
+          "E"
+        ],
+        "rule_distractors": [
+          "B",
+          "D"
+        ]
+      },
+      {
+        "episode": 4,
+        "rule_seed": 2005,
+        "rule_correct_objects": [
+          "A",
+          "D",
+          "E"
+        ],
+        "rule_required_order": [
+          "E",
+          "D",
+          "A"
+        ],
+        "rule_distractors": [
+          "B",
+          "C"
+        ]
+      },
+      {
+        "episode": 5,
+        "rule_seed": 2006,
+        "rule_correct_objects": [
+          "A",
+          "D",
+          "E"
+        ],
+        "rule_required_order": [
+          "D",
+          "E",
+          "A"
+        ],
+        "rule_distractors": [
+          "B",
+          "C"
+        ]
+      },
+      {
+        "episode": 6,
+        "rule_seed": 2007,
+        "rule_correct_objects": [
+          "A",
+          "B",
+          "E"
+        ],
+        "rule_required_order": [
+          "B",
+          "A",
+          "E"
+        ],
+        "rule_distractors": [
+          "C",
+          "D"
+        ]
+      },
+      {
+        "episode": 7,
+        "rule_seed": 2008,
+        "rule_correct_objects": [
+          "A",
+          "B",
+          "D"
+        ],
+        "rule_required_order": [
+          "A",
+          "D",
+          "B"
+        ],
+        "rule_distractors": [
+          "C",
+          "E"
+        ]
+      },
+      {
+        "episode": 8,
+        "rule_seed": 2009,
+        "rule_correct_objects": [
+          "B",
+          "C",
+          "D"
+        ],
+        "rule_required_order": [
+          "D",
+          "B",
+          "C"
+        ],
+        "rule_distractors": [
+          "A",
+          "E"
+        ]
+      },
+      {
+        "episode": 9,
+        "rule_seed": 2010,
+        "rule_correct_objects": [
+          "B",
+          "D",
+          "E"
+        ],
+        "rule_required_order": [
+          "E",
+          "D",
+          "B"
+        ],
+        "rule_distractors": [
+          "A",
+          "C"
+        ]
+      }
+    ]
+  },
+  "signal_check": {
+    "num_objects": 6,
+    "n_correct": 4,
+    "max_steps": 75,
+    "episodes_per_cell": 10,
+    "base_seed": 1401,
+    "cells": [
+      {
+        "label": "A",
+        "agent_type": "base_llm",
+        "behavior_version": "N/A"
+      },
+      {
+        "label": "B",
+        "agent_type": "full_cg_db",
+        "behavior_version": "10c"
+      }
+    ],
+    "episode_rules": [
+      {
+        "episode": 0,
+        "rule_seed": 1401,
+        "rule_correct_objects": [
+          "A",
+          "C",
+          "D",
+          "F"
+        ],
+        "rule_required_order": [
+          "F",
+          "A",
+          "C",
+          "D"
+        ],
+        "rule_distractors": [
+          "B",
+          "E"
+        ]
+      },
+      {
+        "episode": 1,
+        "rule_seed": 1402,
+        "rule_correct_objects": [
+          "A",
+          "B",
+          "E",
+          "F"
+        ],
+        "rule_required_order": [
+          "B",
+          "F",
+          "A",
+          "E"
+        ],
+        "rule_distractors": [
+          "C",
+          "D"
+        ]
+      },
+      {
+        "episode": 2,
+        "rule_seed": 1403,
+        "rule_correct_objects": [
+          "B",
+          "C",
+          "D",
+          "F"
+        ],
+        "rule_required_order": [
+          "C",
+          "B",
+          "F",
+          "D"
+        ],
+        "rule_distractors": [
+          "A",
+          "E"
+        ]
+      },
+      {
+        "episode": 3,
+        "rule_seed": 1404,
+        "rule_correct_objects": [
+          "A",
+          "B",
+          "E",
+          "F"
+        ],
+        "rule_required_order": [
+          "B",
+          "A",
+          "F",
+          "E"
+        ],
+        "rule_distractors": [
+          "C",
+          "D"
+        ]
+      },
+      {
+        "episode": 4,
+        "rule_seed": 1405,
+        "rule_correct_objects": [
+          "A",
+          "B",
+          "D",
+          "E"
+        ],
+        "rule_required_order": [
+          "E",
+          "A",
+          "D",
+          "B"
+        ],
+        "rule_distractors": [
+          "C",
+          "F"
+        ]
+      },
+      {
+        "episode": 5,
+        "rule_seed": 1406,
+        "rule_correct_objects": [
+          "B",
+          "D",
+          "E",
+          "F"
+        ],
+        "rule_required_order": [
+          "D",
+          "E",
+          "B",
+          "F"
+        ],
+        "rule_distractors": [
+          "A",
+          "C"
+        ]
+      },
+      {
+        "episode": 6,
+        "rule_seed": 1407,
+        "rule_correct_objects": [
+          "A",
+          "C",
+          "D",
+          "F"
+        ],
+        "rule_required_order": [
+          "F",
+          "A",
+          "C",
+          "D"
+        ],
+        "rule_distractors": [
+          "B",
+          "E"
+        ]
+      },
+      {
+        "episode": 7,
+        "rule_seed": 1408,
+        "rule_correct_objects": [
+          "A",
+          "C",
+          "D",
+          "F"
+        ],
+        "rule_required_order": [
+          "C",
+          "D",
+          "F",
+          "A"
+        ],
+        "rule_distractors": [
+          "B",
+          "E"
+        ]
+      },
+      {
+        "episode": 8,
+        "rule_seed": 1409,
+        "rule_correct_objects": [
+          "A",
+          "C",
+          "E",
+          "F"
+        ],
+        "rule_required_order": [
+          "A",
+          "F",
+          "E",
+          "C"
+        ],
+        "rule_distractors": [
+          "B",
+          "D"
+        ]
+      },
+      {
+        "episode": 9,
+        "rule_seed": 1410,
+        "rule_correct_objects": [
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "rule_required_order": [
+          "E",
+          "C",
+          "D",
+          "F"
+        ],
+        "rule_distractors": [
+          "A",
+          "B"
+        ]
+      }
+    ]
+  },
+  "gradual_feedback_config": {
+    "enabled": true,
+    "checkpoint_interval": 5
+  },
+  "cost_summary": {
+    "total_cost_usd": 41.677458800000004,
+    "episodes_run": 30,
+    "avg_cost_per_episode": 1.3892486266666668,
+    "remaining_budget_usd": 68.32254119999999,
+    "episode_costs": [
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 0,
+        "input_tokens": 156640,
+        "output_tokens": 1997,
+        "trigger_tokens": 0,
+        "cost_usd": 0.499875,
+        "cumulative_cost_usd": 0.499875
+      },
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 1,
+        "input_tokens": 164172,
+        "output_tokens": 1853,
+        "trigger_tokens": 0,
+        "cost_usd": 0.520311,
+        "cumulative_cost_usd": 1.020186
+      },
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 2,
+        "input_tokens": 160189,
+        "output_tokens": 2058,
+        "trigger_tokens": 0,
+        "cost_usd": 0.511437,
+        "cumulative_cost_usd": 1.5316230000000002
+      },
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 3,
+        "input_tokens": 162902,
+        "output_tokens": 2011,
+        "trigger_tokens": 0,
+        "cost_usd": 0.5188710000000001,
+        "cumulative_cost_usd": 2.0504940000000005
+      },
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 4,
+        "input_tokens": 140298,
+        "output_tokens": 1684,
+        "trigger_tokens": 0,
+        "cost_usd": 0.446154,
+        "cumulative_cost_usd": 2.4966480000000004
+      },
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 5,
+        "input_tokens": 175668,
+        "output_tokens": 2276,
+        "trigger_tokens": 0,
+        "cost_usd": 0.5611440000000001,
+        "cumulative_cost_usd": 3.0577920000000005
+      },
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 6,
+        "input_tokens": 129282,
+        "output_tokens": 1829,
+        "trigger_tokens": 0,
+        "cost_usd": 0.415281,
+        "cumulative_cost_usd": 3.4730730000000003
+      },
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 7,
+        "input_tokens": 184547,
+        "output_tokens": 2059,
+        "trigger_tokens": 0,
+        "cost_usd": 0.5845260000000001,
+        "cumulative_cost_usd": 4.057599000000001
+      },
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 8,
+        "input_tokens": 156500,
+        "output_tokens": 1846,
+        "trigger_tokens": 0,
+        "cost_usd": 0.49719,
+        "cumulative_cost_usd": 4.554789
+      },
+      {
+        "condition": "cal_3obj_order_rand",
+        "agent": "base_llm",
+        "episode": 9,
+        "input_tokens": 128293,
+        "output_tokens": 1687,
+        "trigger_tokens": 0,
+        "cost_usd": 0.41018400000000005,
+        "cumulative_cost_usd": 4.9649730000000005
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 0,
+        "input_tokens": 245845,
+        "output_tokens": 2175,
+        "trigger_tokens": 0,
+        "cost_usd": 0.7701600000000001,
+        "cumulative_cost_usd": 5.735133
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 1,
+        "input_tokens": 587531,
+        "output_tokens": 3624,
+        "trigger_tokens": 0,
+        "cost_usd": 1.816953,
+        "cumulative_cost_usd": 7.552086
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 2,
+        "input_tokens": 554297,
+        "output_tokens": 3154,
+        "trigger_tokens": 0,
+        "cost_usd": 1.710201,
+        "cumulative_cost_usd": 9.262287
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 3,
+        "input_tokens": 491626,
+        "output_tokens": 2867,
+        "trigger_tokens": 0,
+        "cost_usd": 1.517883,
+        "cumulative_cost_usd": 10.78017
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 4,
+        "input_tokens": 603637,
+        "output_tokens": 3000,
+        "trigger_tokens": 0,
+        "cost_usd": 1.8559109999999999,
+        "cumulative_cost_usd": 12.636081
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 5,
+        "input_tokens": 570185,
+        "output_tokens": 2921,
+        "trigger_tokens": 0,
+        "cost_usd": 1.75437,
+        "cumulative_cost_usd": 14.390451
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 6,
+        "input_tokens": 571337,
+        "output_tokens": 3123,
+        "trigger_tokens": 0,
+        "cost_usd": 1.760856,
+        "cumulative_cost_usd": 16.151307
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 7,
+        "input_tokens": 605285,
+        "output_tokens": 3195,
+        "trigger_tokens": 0,
+        "cost_usd": 1.86378,
+        "cumulative_cost_usd": 18.015086999999998
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 8,
+        "input_tokens": 585777,
+        "output_tokens": 3296,
+        "trigger_tokens": 0,
+        "cost_usd": 1.806771,
+        "cumulative_cost_usd": 19.821858
+      },
+      {
+        "condition": "4obj_order_rand_A",
+        "agent": "base_llm",
+        "episode": 9,
+        "input_tokens": 594505,
+        "output_tokens": 2910,
+        "trigger_tokens": 0,
+        "cost_usd": 1.827165,
+        "cumulative_cost_usd": 21.649023
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 0,
+        "input_tokens": 694698,
+        "output_tokens": 6839,
+        "trigger_tokens": 63584,
+        "cost_usd": 2.2375461999999997,
+        "cumulative_cost_usd": 23.8865692
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 1,
+        "input_tokens": 735633,
+        "output_tokens": 5945,
+        "trigger_tokens": 61624,
+        "cost_usd": 2.3453732,
+        "cumulative_cost_usd": 26.2319424
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 2,
+        "input_tokens": 713465,
+        "output_tokens": 5085,
+        "trigger_tokens": 63629,
+        "cost_usd": 2.2675732,
+        "cumulative_cost_usd": 28.499515600000002
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 3,
+        "input_tokens": 737307,
+        "output_tokens": 6426,
+        "trigger_tokens": 56967,
+        "cost_usd": 2.3538846,
+        "cumulative_cost_usd": 30.853400200000003
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 4,
+        "input_tokens": 59795,
+        "output_tokens": 2571,
+        "trigger_tokens": 13485,
+        "cost_usd": 0.22873800000000002,
+        "cumulative_cost_usd": 31.082138200000003
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 5,
+        "input_tokens": 441945,
+        "output_tokens": 4635,
+        "trigger_tokens": 31992,
+        "cost_usd": 1.4209536000000003,
+        "cumulative_cost_usd": 32.5030918
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 6,
+        "input_tokens": 718419,
+        "output_tokens": 5587,
+        "trigger_tokens": 61339,
+        "cost_usd": 2.2881332000000003,
+        "cumulative_cost_usd": 34.791225
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 7,
+        "input_tokens": 704060,
+        "output_tokens": 4907,
+        "trigger_tokens": 61053,
+        "cost_usd": 2.2346274,
+        "cumulative_cost_usd": 37.0258524
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 8,
+        "input_tokens": 755068,
+        "output_tokens": 6087,
+        "trigger_tokens": 63632,
+        "cost_usd": 2.4074146000000005,
+        "cumulative_cost_usd": 39.433267
+      },
+      {
+        "condition": "4obj_order_rand_B",
+        "agent": "full_cg_db",
+        "episode": 9,
+        "input_tokens": 703680,
+        "output_tokens": 5613,
+        "trigger_tokens": 61196,
+        "cost_usd": 2.2441918,
+        "cumulative_cost_usd": 41.677458800000004
+      }
+    ]
+  },
+  "results": [
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 0,
+      "success": false,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "B",
+        "E"
+      ],
+      "guessed_order": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "gradual_feedback_events": [],
+      "gradual_feedback_confirmed_objects": [],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "E"
+      ],
+      "rule_required_order": [
+        "A",
+        "B",
+        "E"
+      ],
+      "rule_distractors": [
+        "C",
+        "D"
+      ],
+      "rule_seed": 2001
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 1,
+      "success": true,
+      "steps": 39,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "guessed_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ],
+      "rule_seed": 2002
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 2,
+      "success": true,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_required_order": [
+        "A",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "E"
+      ],
+      "rule_seed": 2003
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 3,
+      "success": false,
+      "steps": 39,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "A",
+        "E"
+      ],
+      "guessed_order": [
+        "A",
+        "C",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "rule_required_order": [
+        "C",
+        "A",
+        "E"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ],
+      "rule_seed": 2004
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 4,
+      "success": true,
+      "steps": 36,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ],
+      "rule_seed": 2005
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 5,
+      "success": true,
+      "steps": 40,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "C"
+      ],
+      "rule_seed": 2006
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 6,
+      "success": true,
+      "steps": 34,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "B",
+        "A",
+        "E"
+      ],
+      "guessed_order": [
+        "B",
+        "A",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "E"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "E"
+      ],
+      "rule_required_order": [
+        "B",
+        "A",
+        "E"
+      ],
+      "rule_distractors": [
+        "C",
+        "D"
+      ],
+      "rule_seed": 2007
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 7,
+      "success": false,
+      "steps": 40,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_required_order": [
+        "A",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "E"
+      ],
+      "rule_seed": 2008
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 8,
+      "success": true,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "D",
+        "B",
+        "C"
+      ],
+      "guessed_order": [
+        "D",
+        "B",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rule_required_order": [
+        "D",
+        "B",
+        "C"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ],
+      "rule_seed": 2009
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode": 9,
+      "success": false,
+      "steps": 34,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "guessed_order": [
+        "D",
+        "E",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ],
+      "rule_seed": 2010
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 0,
+      "success": true,
+      "steps": 47,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "F",
+        "A",
+        "C",
+        "D"
+      ],
+      "guessed_order": [
+        "F",
+        "A",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_required_order": [
+        "F",
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ],
+      "rule_seed": 1401
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 1,
+      "success": false,
+      "steps": 75,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "B",
+        "F",
+        "A",
+        "E"
+      ],
+      "guessed_order": [
+        "F",
+        "B",
+        "E",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "B",
+        "F",
+        "A",
+        "E"
+      ],
+      "rule_distractors": [
+        "C",
+        "D"
+      ],
+      "rule_seed": 1402
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 2,
+      "success": false,
+      "steps": 72,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "B",
+        "F",
+        "D"
+      ],
+      "guessed_order": null,
+      "guessed_rule_type": "conjunctive",
+      "guessed_objects": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_required_order": [
+        "C",
+        "B",
+        "F",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ],
+      "rule_seed": 1403
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 3,
+      "success": false,
+      "steps": 67,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "B",
+        "A",
+        "F",
+        "E"
+      ],
+      "rule_distractors": [
+        "C",
+        "D"
+      ],
+      "rule_seed": 1404
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 4,
+      "success": false,
+      "steps": 75,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "A",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "F"
+      ],
+      "rule_seed": 1405
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 5,
+      "success": false,
+      "steps": 73,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "D",
+        "E",
+        "B",
+        "F"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ],
+      "rule_seed": 1406
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 6,
+      "success": false,
+      "steps": 75,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_required_order": [
+        "F",
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ],
+      "rule_seed": 1407
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 7,
+      "success": false,
+      "steps": 75,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "F",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ],
+      "rule_seed": 1408
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 8,
+      "success": false,
+      "steps": 73,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "A",
+        "F",
+        "E",
+        "C"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ],
+      "rule_seed": 1409
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode": 9,
+      "success": false,
+      "steps": 74,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "C",
+        "D",
+        "F"
+      ],
+      "guessed_order": null,
+      "guessed_rule_type": "conjunctive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ],
+      "rule_seed": 1410
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 0,
+      "success": false,
+      "steps": 72,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "F",
+        "A",
+        "C",
+        "D"
+      ],
+      "guessed_order": [
+        "D",
+        "A",
+        "C",
+        "F",
+        "E",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_required_order": [
+        "F",
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ],
+      "rule_seed": 1401
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 1,
+      "success": false,
+      "steps": 75,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "B",
+        "F",
+        "A",
+        "E"
+      ],
+      "rule_distractors": [
+        "C",
+        "D"
+      ],
+      "rule_seed": 1402
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 2,
+      "success": false,
+      "steps": 75,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_required_order": [
+        "C",
+        "B",
+        "F",
+        "D"
+      ],
+      "rule_distractors": [
+        "A",
+        "E"
+      ],
+      "rule_seed": 1403
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 3,
+      "success": false,
+      "steps": 75,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "B",
+        "A",
+        "F",
+        "E"
+      ],
+      "guessed_order": [
+        "B",
+        "E",
+        "F",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "B",
+        "A",
+        "F",
+        "E"
+      ],
+      "rule_distractors": [
+        "C",
+        "D"
+      ],
+      "rule_seed": 1404
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 4,
+      "success": false,
+      "steps": 18,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "A",
+        "D",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_required_order": [
+        "E",
+        "A",
+        "D",
+        "B"
+      ],
+      "rule_distractors": [
+        "C",
+        "F"
+      ],
+      "rule_seed": 1405
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 5,
+      "success": false,
+      "steps": 56,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "D",
+        "E",
+        "B",
+        "F"
+      ],
+      "guessed_order": [
+        "D",
+        "E",
+        "B",
+        "C",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "rule_correct_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "D",
+        "E",
+        "B",
+        "F"
+      ],
+      "rule_distractors": [
+        "A",
+        "C"
+      ],
+      "rule_seed": 1406
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 6,
+      "success": false,
+      "steps": 75,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_required_order": [
+        "F",
+        "A",
+        "C",
+        "D"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ],
+      "rule_seed": 1407
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 7,
+      "success": false,
+      "steps": 75,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_required_order": [
+        "C",
+        "D",
+        "F",
+        "A"
+      ],
+      "rule_distractors": [
+        "B",
+        "E"
+      ],
+      "rule_seed": 1408
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 8,
+      "success": false,
+      "steps": 74,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "A",
+        "F",
+        "E",
+        "C"
+      ],
+      "rule_distractors": [
+        "B",
+        "D"
+      ],
+      "rule_seed": 1409
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode": 9,
+      "success": true,
+      "steps": 73,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "C",
+        "D",
+        "F"
+      ],
+      "guessed_order": [
+        "E",
+        "C",
+        "D",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "rule_correct_objects": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "rule_required_order": [
+        "E",
+        "C",
+        "D",
+        "F"
+      ],
+      "rule_distractors": [
+        "A",
+        "B"
+      ],
+      "rule_seed": 1410
+    }
+  ]
+}

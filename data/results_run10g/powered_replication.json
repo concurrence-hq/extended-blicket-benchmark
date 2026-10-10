@@ -1,0 +1,3408 @@
+{
+  "run_name": "run10g",
+  "status": "COMPLETED",
+  "description": "Run 10g: Powered replication of 10f 100-step finding. CAL 3/10 (30%) below threshold \u2014 investigator override. Fresh: base_llm 4/20 (20%), full_cg_db 5/20 (25%). Pooled (N=30): base_llm 6/30 (20%), full_cg_db 9/30 (30%). Fisher p=0.276 (n.s.).",
+  "compat_check": {
+    "passed": true,
+    "model_string": "claude-sonnet-4-5-20250929",
+    "seed_1411_correct": true
+  },
+  "calibration": {
+    "cal_seeds_2001_2005": {
+      "accuracy": "0/5",
+      "rate": 0.0
+    },
+    "enhanced_seeds_2006_2010": {
+      "accuracy": "3/5",
+      "rate": 0.6
+    },
+    "full_cal": {
+      "accuracy": "3/10",
+      "rate": 0.3
+    },
+    "threshold": 0.4,
+    "gate_fired": true,
+    "override": "Investigator override \u2014 proceeded based on stochastic explanation"
+  },
+  "primary_results": {
+    "cell_A_base_llm": {
+      "accuracy": "4/20",
+      "rate": 0.2
+    },
+    "cell_B_full_cg_db": {
+      "accuracy": "5/20",
+      "rate": 0.25
+    },
+    "fresh_difference_pp": 4.999999999999999,
+    "pooled_base_llm": "6/30 (20%)",
+    "pooled_full_cg_db": "9/30 (30%)",
+    "pooled_difference_pp": 10.0,
+    "fisher_exact_one_sided_p": 0.276,
+    "fisher_exact_two_sided_p": 0.552,
+    "mcnemar_exact_p": 1.0
+  },
+  "desync_activations": {
+    "total": 187,
+    "per_episode": [
+      2,
+      4,
+      0,
+      6,
+      0,
+      3,
+      0,
+      1,
+      4,
+      8,
+      1,
+      1,
+      2,
+      2,
+      93,
+      0,
+      58,
+      1,
+      0,
+      1
+    ],
+    "episodes_with_desyncs": 15,
+    "max_single_episode": 93,
+    "expected": 0,
+    "note": "187 activations on v1 CG \u2014 unexpected confound"
+  },
+  "total_cost_usd": 122.88,
+  "cost_breakdown": {
+    "compat": 1.18,
+    "calibration": 2.59,
+    "calibration_enhanced": 2.39,
+    "cell_A": 48.37,
+    "cell_B": 68.35
+  },
+  "episodes_completed": 51,
+  "results": [
+    {
+      "condition": "compat_check",
+      "agent_type": "base_llm",
+      "episode_number": 0,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 59,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
+      "total_input_tokens": 378203,
+      "total_output_tokens": 2950,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 149.65720987319946,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A"
+      ],
+      "cell": "compat"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 0,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 36,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "B",
+        "E"
+      ],
+      "guessed_order": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "total_input_tokens": 139673,
+      "total_output_tokens": 1840,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 77.36564779281616,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [],
+      "gradual_feedback_confirmed_objects": [],
+      "cell": "calibration"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 1,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 40,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "conjunctive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "guessed_order": null,
+      "total_input_tokens": 180449,
+      "total_output_tokens": 1804,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 83.34711003303528,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "cell": "calibration"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 2,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 40,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "B"
+      ],
+      "guessed_order": [
+        "B",
+        "A",
+        "D"
+      ],
+      "total_input_tokens": 174257,
+      "total_output_tokens": 2136,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 90.56462907791138,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "cell": "calibration"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 3,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 40,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 159027,
+      "total_output_tokens": 1563,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 79.16451406478882,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "E"
+      ],
+      "cell": "calibration"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 4,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 38,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "D",
+        "A"
+      ],
+      "guessed_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "total_input_tokens": 163034,
+      "total_output_tokens": 2148,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 98.27239799499512,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "cell": "calibration"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 0,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 34,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "guessed_order": [
+        "D",
+        "E",
+        "A"
+      ],
+      "total_input_tokens": 129283,
+      "total_output_tokens": 1759,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 77.31797194480896,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "D",
+        "E"
+      ],
+      "cell": "calibration_enhanced"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 1,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 40,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 163855,
+      "total_output_tokens": 1869,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 93.72901391983032,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E"
+      ],
+      "cell": "calibration_enhanced"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 2,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 40,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "B"
+      ],
+      "total_input_tokens": 181089,
+      "total_output_tokens": 3007,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 115.12171292304993,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "D"
+      ],
+      "cell": "calibration_enhanced"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 3,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 40,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 162684,
+      "total_output_tokens": 1767,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 79.97161912918091,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "C",
+        "D"
+      ],
+      "cell": "calibration_enhanced"
+    },
+    {
+      "condition": "cal_3obj_order_rand",
+      "agent_type": "base_llm",
+      "episode_number": 4,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 32,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "D",
+        "B"
+      ],
+      "total_input_tokens": 111264,
+      "total_output_tokens": 1459,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 72.49545192718506,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E"
+      ],
+      "cell": "calibration_enhanced"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 0,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 93,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 929029,
+      "total_output_tokens": 4494,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 220.58490800857544,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 1,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 95,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "conjunctive",
+      "guessed_objects": [
+        "A",
+        "C"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "D",
+        "F",
+        "B"
+      ],
+      "guessed_order": null,
+      "total_input_tokens": 948830,
+      "total_output_tokens": 4199,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 225.85798406600952,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 2,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 92,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "guessed_rule_type": "conjunctive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "D",
+        "C",
+        "A",
+        "F"
+      ],
+      "guessed_order": null,
+      "total_input_tokens": 878237,
+      "total_output_tokens": 3618,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 198.7164430618286,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 3,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 88,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "D",
+        "C",
+        "A"
+      ],
+      "guessed_order": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "total_input_tokens": 783243,
+      "total_output_tokens": 3593,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 207.21519303321838,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 4,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 95,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "A",
+        "C",
+        "D"
+      ],
+      "guessed_order": [
+        "E",
+        "A",
+        "C",
+        "D"
+      ],
+      "total_input_tokens": 893392,
+      "total_output_tokens": 3607,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 223.05348086357117,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 5,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 63,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "F",
+        "E",
+        "B",
+        "A"
+      ],
+      "guessed_order": [
+        "F",
+        "E",
+        "B",
+        "A"
+      ],
+      "total_input_tokens": 424206,
+      "total_output_tokens": 2861,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 135.14758610725403,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 6,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 95,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 946230,
+      "total_output_tokens": 3874,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 216.8831009864807,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 7,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 73,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "F",
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "F",
+        "A",
+        "B"
+      ],
+      "total_input_tokens": 532562,
+      "total_output_tokens": 2718,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 177.24285793304443,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 8,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 95,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 903089,
+      "total_output_tokens": 2857,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 209.09477186203003,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 9,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 91,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 859209,
+      "total_output_tokens": 3560,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 202.25935792922974,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 10,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 89,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 822387,
+      "total_output_tokens": 3409,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 186.7357759475708,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 11,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 93,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 913613,
+      "total_output_tokens": 3837,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 199.60584568977356,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 12,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 97,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "F",
+        "C",
+        "E",
+        "A"
+      ],
+      "guessed_order": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "total_input_tokens": 936637,
+      "total_output_tokens": 3808,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 237.42415618896484,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 13,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 95,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 933403,
+      "total_output_tokens": 3737,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 219.6331388950348,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 14,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 59,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "C",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "F",
+        "C",
+        "B",
+        "A"
+      ],
+      "guessed_order": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "total_input_tokens": 371910,
+      "total_output_tokens": 2485,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 134.02308082580566,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "C",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 15,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 86,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 785045,
+      "total_output_tokens": 3738,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 201.63979721069336,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 16,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 91,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 871596,
+      "total_output_tokens": 3626,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 221.91199898719788,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 17,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 91,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 878554,
+      "total_output_tokens": 3762,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 222.9444670677185,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 18,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 55,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "B",
+        "C",
+        "F"
+      ],
+      "guessed_order": [
+        "E",
+        "B",
+        "C",
+        "F"
+      ],
+      "total_input_tokens": 317121,
+      "total_output_tokens": 2230,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 108.07417392730713,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_A",
+      "agent_type": "base_llm",
+      "episode_number": 19,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 89,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "F",
+        "D",
+        "B",
+        "E"
+      ],
+      "guessed_order": [
+        "D",
+        "B",
+        "E",
+        "F"
+      ],
+      "total_input_tokens": 843962,
+      "total_output_tokens": 3890,
+      "trigger_tokens": 0,
+      "parse_failures": 0,
+      "wall_time_seconds": 198.28865098953247,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_A"
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 0,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 62,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "F",
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "F",
+        "A",
+        "B"
+      ],
+      "total_input_tokens": 514025,
+      "total_output_tokens": 4658,
+      "trigger_tokens": 53274,
+      "parse_failures": 0,
+      "wall_time_seconds": 282.6684491634369,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 2
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 1,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 100,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 1238045,
+      "total_output_tokens": 7141,
+      "trigger_tokens": 85108,
+      "parse_failures": 0,
+      "wall_time_seconds": 429.80673718452454,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 4
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 2,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 99,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "D",
+        "C",
+        "A",
+        "F"
+      ],
+      "guessed_order": [
+        "F",
+        "D",
+        "C",
+        "A"
+      ],
+      "total_input_tokens": 1166820,
+      "total_output_tokens": 6149,
+      "trigger_tokens": 79506,
+      "parse_failures": 0,
+      "wall_time_seconds": 409.64973521232605,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 0
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 3,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 99,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "D",
+        "C",
+        "A"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "A",
+        "E"
+      ],
+      "total_input_tokens": 1219700,
+      "total_output_tokens": 7166,
+      "trigger_tokens": 82654,
+      "parse_failures": 0,
+      "wall_time_seconds": 463.7806611061096,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 6
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 4,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 100,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 1182806,
+      "total_output_tokens": 5944,
+      "trigger_tokens": 83286,
+      "parse_failures": 0,
+      "wall_time_seconds": 424.6377742290497,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 0
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 5,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 100,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "F",
+        "E",
+        "B",
+        "A"
+      ],
+      "guessed_order": [
+        "F",
+        "E",
+        "B",
+        "A"
+      ],
+      "total_input_tokens": 1248844,
+      "total_output_tokens": 6857,
+      "trigger_tokens": 82391,
+      "parse_failures": 0,
+      "wall_time_seconds": 427.59076595306396,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 3
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 6,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 100,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 1228659,
+      "total_output_tokens": 7068,
+      "trigger_tokens": 80452,
+      "parse_failures": 0,
+      "wall_time_seconds": 453.7034070491791,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 0
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 7,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 100,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 1174780,
+      "total_output_tokens": 6501,
+      "trigger_tokens": 90828,
+      "parse_failures": 0,
+      "wall_time_seconds": 474.49732995033264,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 1
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 8,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 98,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 1276383,
+      "total_output_tokens": 8212,
+      "trigger_tokens": 83723,
+      "parse_failures": 0,
+      "wall_time_seconds": 452.77397203445435,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 4
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 9,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 100,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 1287541,
+      "total_output_tokens": 8096,
+      "trigger_tokens": 96863,
+      "parse_failures": 0,
+      "wall_time_seconds": 489.22609424591064,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 8
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 10,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 73,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "F",
+        "C",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "F",
+        "C",
+        "B"
+      ],
+      "total_input_tokens": 693632,
+      "total_output_tokens": 5297,
+      "trigger_tokens": 51618,
+      "parse_failures": 0,
+      "wall_time_seconds": 303.3253917694092,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 1
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 11,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 96,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "conjunctive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "E",
+        "D",
+        "A",
+        "C"
+      ],
+      "guessed_order": null,
+      "total_input_tokens": 1216739,
+      "total_output_tokens": 8172,
+      "trigger_tokens": 59209,
+      "parse_failures": 0,
+      "wall_time_seconds": 405.7884249687195,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "E"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 1
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 12,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 100,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 1165348,
+      "total_output_tokens": 6011,
+      "trigger_tokens": 85001,
+      "parse_failures": 0,
+      "wall_time_seconds": 416.76229095458984,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 2
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 13,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 100,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 1224551,
+      "total_output_tokens": 7156,
+      "trigger_tokens": 89190,
+      "parse_failures": 0,
+      "wall_time_seconds": 463.3888430595398,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 2
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 14,
+      "success": false,
+      "answer_submitted": false,
+      "steps_taken": 95,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "C",
+        "F"
+      ],
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "total_input_tokens": 1295887,
+      "total_output_tokens": 7009,
+      "trigger_tokens": 102195,
+      "parse_failures": 0,
+      "wall_time_seconds": 462.8949899673462,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "C",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 93
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 15,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 100,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "B",
+        "E",
+        "A",
+        "C"
+      ],
+      "guessed_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "total_input_tokens": 1197754,
+      "total_output_tokens": 6467,
+      "trigger_tokens": 79655,
+      "parse_failures": 0,
+      "wall_time_seconds": 432.12174105644226,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 0
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 16,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 61,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "B",
+        "E",
+        "D",
+        "F"
+      ],
+      "guessed_order": [
+        "B",
+        "E",
+        "D",
+        "F"
+      ],
+      "total_input_tokens": 570670,
+      "total_output_tokens": 4839,
+      "trigger_tokens": 49030,
+      "parse_failures": 0,
+      "wall_time_seconds": 283.3366050720215,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 58
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 17,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 100,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "F",
+        "D",
+        "A",
+        "C"
+      ],
+      "guessed_order": [
+        "D",
+        "F",
+        "A",
+        "C"
+      ],
+      "total_input_tokens": 1183445,
+      "total_output_tokens": 5856,
+      "trigger_tokens": 79763,
+      "parse_failures": 0,
+      "wall_time_seconds": 420.57650899887085,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "A",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object A. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "A",
+        "C",
+        "D",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 1
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 18,
+      "success": true,
+      "answer_submitted": true,
+      "steps_taken": 59,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "order_correct": true,
+      "true_order": [
+        "E",
+        "B",
+        "C",
+        "F"
+      ],
+      "guessed_order": [
+        "E",
+        "B",
+        "C",
+        "F"
+      ],
+      "total_input_tokens": 442330,
+      "total_output_tokens": 3878,
+      "trigger_tokens": 59279,
+      "parse_failures": 0,
+      "wall_time_seconds": 266.46852684020996,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "C",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object C. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 0
+    },
+    {
+      "condition": "4obj_order_rand_B",
+      "agent_type": "full_cg_db",
+      "episode_number": 19,
+      "success": false,
+      "answer_submitted": true,
+      "steps_taken": 98,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "true_rule_type": "order_sensitive",
+      "true_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "order_correct": false,
+      "true_order": [
+        "F",
+        "D",
+        "B",
+        "E"
+      ],
+      "guessed_order": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "total_input_tokens": 1193362,
+      "total_output_tokens": 7380,
+      "trigger_tokens": 79169,
+      "parse_failures": 0,
+      "wall_time_seconds": 415.7059247493744,
+      "error": null,
+      "partial_feedback_step": null,
+      "partial_feedback_message": null,
+      "gradual_feedback_events": [
+        {
+          "step": 5,
+          "object": "B",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object B. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 10,
+          "object": "D",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object D. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 15,
+          "object": "E",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object E. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        },
+        {
+          "step": 20,
+          "object": "F",
+          "message": "OBSERVATION: Based on your exploration patterns, the detector appears to have some sensitivity to object F. The nature of this sensitivity is unclear \u2014 further investigation is needed."
+        }
+      ],
+      "gradual_feedback_confirmed_objects": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
+      "cell": "4obj_100steps_B",
+      "desync_activations": 1
+    }
+  ]
+}

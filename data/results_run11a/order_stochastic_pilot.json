@@ -1,0 +1,1076 @@
+{
+  "run_name": "run11a",
+  "description": "Run 11a: ORDER_STOCHASTIC Combined Condition Pilot. Tests whether agents can identify a combined order-sensitive AND stochastic rule (A\u2192B, p=0.7). 2 cells: A (base_llm), B (full_cg_db). 15 episodes per cell, 30 total.",
+  "environment": {
+    "num_objects": 5,
+    "required_objects": [
+      "A",
+      "B"
+    ],
+    "required_order": [
+      "A",
+      "B"
+    ],
+    "activation_probability": 0.7,
+    "max_steps": 75,
+    "condition": "order_stochastic",
+    "rule_type": "order_sensitive_stochastic"
+  },
+  "instrumentation": {
+    "temperature": 1.0,
+    "action_model": "claude-sonnet-4-5-20250929",
+    "trigger_model": "claude-haiku-4-5-20251001"
+  },
+  "cells": [
+    {
+      "label": "A",
+      "agent_type": "base_llm",
+      "episodes": 15,
+      "seeds": "1101-1115",
+      "behavior_version": "N/A"
+    },
+    {
+      "label": "B",
+      "agent_type": "full_cg_db",
+      "episodes": 15,
+      "seeds": "1101-1115",
+      "behavior_version": "10c"
+    }
+  ],
+  "gradual_feedback_config": {
+    "enabled": false
+  },
+  "cost_summary": {
+    "total_cost_usd": 43.0563084,
+    "episodes_run": 30,
+    "avg_cost_per_episode": 1.43521028,
+    "remaining_budget_usd": 31.9436916,
+    "episode_costs": [
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 0,
+        "input_tokens": 424680,
+        "output_tokens": 3744,
+        "trigger_tokens": 0,
+        "cost_usd": 1.3302,
+        "cumulative_cost_usd": 1.3302
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 1,
+        "input_tokens": 413647,
+        "output_tokens": 3258,
+        "trigger_tokens": 0,
+        "cost_usd": 1.289811,
+        "cumulative_cost_usd": 2.620011
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 2,
+        "input_tokens": 301114,
+        "output_tokens": 3246,
+        "trigger_tokens": 0,
+        "cost_usd": 0.952032,
+        "cumulative_cost_usd": 3.572043
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 3,
+        "input_tokens": 482945,
+        "output_tokens": 3628,
+        "trigger_tokens": 0,
+        "cost_usd": 1.503255,
+        "cumulative_cost_usd": 5.075298
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 4,
+        "input_tokens": 294416,
+        "output_tokens": 2727,
+        "trigger_tokens": 0,
+        "cost_usd": 0.924153,
+        "cumulative_cost_usd": 5.9994510000000005
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 5,
+        "input_tokens": 341048,
+        "output_tokens": 3152,
+        "trigger_tokens": 0,
+        "cost_usd": 1.070424,
+        "cumulative_cost_usd": 7.069875000000001
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 6,
+        "input_tokens": 471950,
+        "output_tokens": 3735,
+        "trigger_tokens": 0,
+        "cost_usd": 1.471875,
+        "cumulative_cost_usd": 8.54175
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 7,
+        "input_tokens": 248514,
+        "output_tokens": 2354,
+        "trigger_tokens": 0,
+        "cost_usd": 0.780852,
+        "cumulative_cost_usd": 9.322602
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 8,
+        "input_tokens": 422703,
+        "output_tokens": 4244,
+        "trigger_tokens": 0,
+        "cost_usd": 1.331769,
+        "cumulative_cost_usd": 10.654371
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 9,
+        "input_tokens": 563265,
+        "output_tokens": 4622,
+        "trigger_tokens": 0,
+        "cost_usd": 1.759125,
+        "cumulative_cost_usd": 12.413495999999999
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 10,
+        "input_tokens": 159031,
+        "output_tokens": 2348,
+        "trigger_tokens": 0,
+        "cost_usd": 0.512313,
+        "cumulative_cost_usd": 12.925809
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 11,
+        "input_tokens": 542341,
+        "output_tokens": 4823,
+        "trigger_tokens": 0,
+        "cost_usd": 1.6993680000000002,
+        "cumulative_cost_usd": 14.625176999999999
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 12,
+        "input_tokens": 228051,
+        "output_tokens": 2282,
+        "trigger_tokens": 0,
+        "cost_usd": 0.718383,
+        "cumulative_cost_usd": 15.343559999999998
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 13,
+        "input_tokens": 410401,
+        "output_tokens": 3048,
+        "trigger_tokens": 0,
+        "cost_usd": 1.276923,
+        "cumulative_cost_usd": 16.620483
+      },
+      {
+        "condition": "order_stochastic_A",
+        "agent": "base_llm",
+        "episode": 14,
+        "input_tokens": 226384,
+        "output_tokens": 2913,
+        "trigger_tokens": 0,
+        "cost_usd": 0.722847,
+        "cumulative_cost_usd": 17.34333
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 0,
+        "input_tokens": 521067,
+        "output_tokens": 6833,
+        "trigger_tokens": 24595,
+        "cost_usd": 1.685372,
+        "cumulative_cost_usd": 19.028702000000003
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 1,
+        "input_tokens": 491825,
+        "output_tokens": 6308,
+        "trigger_tokens": 4833,
+        "cost_usd": 1.5739614,
+        "cumulative_cost_usd": 20.602663400000004
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 2,
+        "input_tokens": 446258,
+        "output_tokens": 6439,
+        "trigger_tokens": 8702,
+        "cost_usd": 1.4423206,
+        "cumulative_cost_usd": 22.044984000000003
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 3,
+        "input_tokens": 375140,
+        "output_tokens": 5182,
+        "trigger_tokens": 21026,
+        "cost_usd": 1.2199708000000002,
+        "cumulative_cost_usd": 23.2649548
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 4,
+        "input_tokens": 444594,
+        "output_tokens": 5959,
+        "trigger_tokens": 17193,
+        "cost_usd": 1.4369214000000001,
+        "cumulative_cost_usd": 24.7018762
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 5,
+        "input_tokens": 610523,
+        "output_tokens": 5239,
+        "trigger_tokens": 22913,
+        "cost_usd": 1.9284843999999999,
+        "cumulative_cost_usd": 26.6303606
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 6,
+        "input_tokens": 711625,
+        "output_tokens": 9066,
+        "trigger_tokens": 6989,
+        "cost_usd": 2.2764562,
+        "cumulative_cost_usd": 28.9068168
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 7,
+        "input_tokens": 620669,
+        "output_tokens": 6136,
+        "trigger_tokens": 29147,
+        "cost_usd": 1.9773645999999998,
+        "cumulative_cost_usd": 30.884181400000003
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 8,
+        "input_tokens": 689687,
+        "output_tokens": 6646,
+        "trigger_tokens": 19732,
+        "cost_usd": 2.1845366,
+        "cumulative_cost_usd": 33.068718000000004
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 9,
+        "input_tokens": 703826,
+        "output_tokens": 6366,
+        "trigger_tokens": 14509,
+        "cost_usd": 2.2185751999999996,
+        "cumulative_cost_usd": 35.2872932
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 10,
+        "input_tokens": 224878,
+        "output_tokens": 4006,
+        "trigger_tokens": 7598,
+        "cost_usd": 0.7408024000000001,
+        "cumulative_cost_usd": 36.0280956
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 11,
+        "input_tokens": 658205,
+        "output_tokens": 6811,
+        "trigger_tokens": 28457,
+        "cost_usd": 2.0995456,
+        "cumulative_cost_usd": 38.1276412
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 12,
+        "input_tokens": 721222,
+        "output_tokens": 6743,
+        "trigger_tokens": 18607,
+        "cost_usd": 2.2796966,
+        "cumulative_cost_usd": 40.4073378
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 13,
+        "input_tokens": 424886,
+        "output_tokens": 4521,
+        "trigger_tokens": 3105,
+        "cost_usd": 1.344957,
+        "cumulative_cost_usd": 41.7522948
+      },
+      {
+        "condition": "order_stochastic_B",
+        "agent": "full_cg_db",
+        "episode": 14,
+        "input_tokens": 405575,
+        "output_tokens": 5009,
+        "trigger_tokens": 15192,
+        "cost_usd": 1.3040136,
+        "cumulative_cost_usd": 43.0563084
+      }
+    ]
+  },
+  "results": [
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 0,
+      "success": false,
+      "steps": 61,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": []
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 1,
+      "success": true,
+      "steps": 63,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 2,
+      "success": true,
+      "steps": 51,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 3,
+      "success": false,
+      "steps": 69,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 4,
+      "success": true,
+      "steps": 53,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 5,
+      "success": true,
+      "steps": 57,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 6,
+      "success": true,
+      "steps": 68,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 7,
+      "success": true,
+      "steps": 49,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 8,
+      "success": true,
+      "steps": 63,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 9,
+      "success": true,
+      "steps": 73,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 10,
+      "success": false,
+      "steps": 37,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 11,
+      "success": false,
+      "steps": 69,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 12,
+      "success": true,
+      "steps": 47,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 13,
+      "success": true,
+      "steps": 63,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_A",
+      "agent_type": "base_llm",
+      "episode": 14,
+      "success": true,
+      "steps": 45,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 0,
+      "success": true,
+      "steps": 61,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 1,
+      "success": true,
+      "steps": 57,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 2,
+      "success": true,
+      "steps": 55,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 3,
+      "success": true,
+      "steps": 51,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 4,
+      "success": true,
+      "steps": 55,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 5,
+      "success": true,
+      "steps": 71,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 6,
+      "success": true,
+      "steps": 67,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 7,
+      "success": false,
+      "steps": 69,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 8,
+      "success": false,
+      "steps": 71,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 9,
+      "success": false,
+      "steps": 74,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": false,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "E",
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B",
+        "E"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 10,
+      "success": false,
+      "steps": 39,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 11,
+      "success": true,
+      "steps": 69,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 12,
+      "success": false,
+      "steps": 73,
+      "answer_submitted": true,
+      "rule_type_correct": false,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 13,
+      "success": true,
+      "steps": 57,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "condition": "order_stochastic_B",
+      "agent_type": "full_cg_db",
+      "episode": 14,
+      "success": true,
+      "steps": 55,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "B"
+      ],
+      "guessed_order": [
+        "A",
+        "B"
+      ],
+      "guessed_rule_type": "order_sensitive_stochastic",
+      "guessed_objects": [
+        "A",
+        "B"
+      ]
+    }
+  ]
+}

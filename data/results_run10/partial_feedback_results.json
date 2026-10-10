@@ -1,0 +1,2184 @@
+{
+  "run_name": "run10",
+  "description": "Partial feedback order-sensitive pilot: reveal correct objects (not order) after exploration",
+  "num_objects": 5,
+  "base_seed": 1001,
+  "partial_feedback_config": {
+    "enabled": true,
+    "min_steps": 5,
+    "min_unique_combos": 3,
+    "correct_objects": [
+      "A",
+      "C",
+      "D"
+    ]
+  },
+  "cells": [
+    {
+      "label": "A",
+      "agent_type": "base_llm",
+      "n_order_objects": 3,
+      "required_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "max_steps": 20
+    },
+    {
+      "label": "B",
+      "agent_type": "full_cg_db",
+      "n_order_objects": 3,
+      "required_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "max_steps": 20
+    },
+    {
+      "label": "C",
+      "agent_type": "base_llm",
+      "n_order_objects": 3,
+      "required_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "max_steps": 40
+    },
+    {
+      "label": "D",
+      "agent_type": "full_cg_db",
+      "n_order_objects": 3,
+      "required_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "max_steps": 40
+    }
+  ],
+  "cost_summary": {
+    "total_cost_usd": 21.5936452,
+    "episodes_run": 60,
+    "avg_cost_per_episode": 0.35989408666666667,
+    "remaining_budget_usd": 63.4063548,
+    "episode_costs": [
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 0,
+        "input_tokens": 44448,
+        "output_tokens": 1045,
+        "trigger_tokens": 0,
+        "cost_usd": 0.14901899999999998,
+        "cumulative_cost_usd": 0.14901899999999998
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 1,
+        "input_tokens": 48842,
+        "output_tokens": 1377,
+        "trigger_tokens": 0,
+        "cost_usd": 0.16718100000000002,
+        "cumulative_cost_usd": 0.31620000000000004
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 2,
+        "input_tokens": 46223,
+        "output_tokens": 1255,
+        "trigger_tokens": 0,
+        "cost_usd": 0.15749400000000002,
+        "cumulative_cost_usd": 0.47369400000000006
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 3,
+        "input_tokens": 45377,
+        "output_tokens": 1214,
+        "trigger_tokens": 0,
+        "cost_usd": 0.154341,
+        "cumulative_cost_usd": 0.6280350000000001
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 4,
+        "input_tokens": 49435,
+        "output_tokens": 1283,
+        "trigger_tokens": 0,
+        "cost_usd": 0.16755,
+        "cumulative_cost_usd": 0.7955850000000001
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 5,
+        "input_tokens": 45612,
+        "output_tokens": 1197,
+        "trigger_tokens": 0,
+        "cost_usd": 0.154791,
+        "cumulative_cost_usd": 0.9503760000000001
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 6,
+        "input_tokens": 50665,
+        "output_tokens": 1401,
+        "trigger_tokens": 0,
+        "cost_usd": 0.17301,
+        "cumulative_cost_usd": 1.123386
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 7,
+        "input_tokens": 49544,
+        "output_tokens": 1363,
+        "trigger_tokens": 0,
+        "cost_usd": 0.169077,
+        "cumulative_cost_usd": 1.292463
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 8,
+        "input_tokens": 48888,
+        "output_tokens": 1389,
+        "trigger_tokens": 0,
+        "cost_usd": 0.167499,
+        "cumulative_cost_usd": 1.459962
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 9,
+        "input_tokens": 45618,
+        "output_tokens": 1278,
+        "trigger_tokens": 0,
+        "cost_usd": 0.156024,
+        "cumulative_cost_usd": 1.615986
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 10,
+        "input_tokens": 49531,
+        "output_tokens": 1291,
+        "trigger_tokens": 0,
+        "cost_usd": 0.167958,
+        "cumulative_cost_usd": 1.783944
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 11,
+        "input_tokens": 50510,
+        "output_tokens": 1385,
+        "trigger_tokens": 0,
+        "cost_usd": 0.17230499999999999,
+        "cumulative_cost_usd": 1.956249
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 12,
+        "input_tokens": 45618,
+        "output_tokens": 1108,
+        "trigger_tokens": 0,
+        "cost_usd": 0.153474,
+        "cumulative_cost_usd": 2.109723
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 13,
+        "input_tokens": 49754,
+        "output_tokens": 1340,
+        "trigger_tokens": 0,
+        "cost_usd": 0.169362,
+        "cumulative_cost_usd": 2.279085
+      },
+      {
+        "condition": "3obj_order_pf_A",
+        "agent": "base_llm",
+        "episode": 14,
+        "input_tokens": 46033,
+        "output_tokens": 1338,
+        "trigger_tokens": 0,
+        "cost_usd": 0.158169,
+        "cumulative_cost_usd": 2.437254
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 0,
+        "input_tokens": 61457,
+        "output_tokens": 1804,
+        "trigger_tokens": 13880,
+        "cost_usd": 0.222535,
+        "cumulative_cost_usd": 2.659789
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 1,
+        "input_tokens": 65026,
+        "output_tokens": 2299,
+        "trigger_tokens": 13496,
+        "cost_usd": 0.2403598,
+        "cumulative_cost_usd": 2.9001488
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 2,
+        "input_tokens": 57758,
+        "output_tokens": 2031,
+        "trigger_tokens": 14040,
+        "cost_usd": 0.214971,
+        "cumulative_cost_usd": 3.1151198
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 3,
+        "input_tokens": 68828,
+        "output_tokens": 2145,
+        "trigger_tokens": 10962,
+        "cost_usd": 0.2474286,
+        "cumulative_cost_usd": 3.3625484
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 4,
+        "input_tokens": 62324,
+        "output_tokens": 2348,
+        "trigger_tokens": 10870,
+        "cost_usd": 0.230888,
+        "cumulative_cost_usd": 3.5934364000000003
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 5,
+        "input_tokens": 62920,
+        "output_tokens": 2224,
+        "trigger_tokens": 11442,
+        "cost_usd": 0.23127360000000002,
+        "cumulative_cost_usd": 3.8247100000000005
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 6,
+        "input_tokens": 57836,
+        "output_tokens": 1758,
+        "trigger_tokens": 13585,
+        "cost_usd": 0.210746,
+        "cumulative_cost_usd": 4.035456000000001
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 7,
+        "input_tokens": 64860,
+        "output_tokens": 2101,
+        "trigger_tokens": 14210,
+        "cost_usd": 0.23746299999999998,
+        "cumulative_cost_usd": 4.272919000000001
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 8,
+        "input_tokens": 66188,
+        "output_tokens": 2412,
+        "trigger_tokens": 11002,
+        "cost_usd": 0.2435456,
+        "cumulative_cost_usd": 4.516464600000001
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 9,
+        "input_tokens": 55805,
+        "output_tokens": 1752,
+        "trigger_tokens": 14119,
+        "cost_usd": 0.2049902,
+        "cumulative_cost_usd": 4.721454800000001
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 10,
+        "input_tokens": 71098,
+        "output_tokens": 2286,
+        "trigger_tokens": 10537,
+        "cost_usd": 0.2560136,
+        "cumulative_cost_usd": 4.977468400000001
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 11,
+        "input_tokens": 66785,
+        "output_tokens": 2072,
+        "trigger_tokens": 10358,
+        "cost_usd": 0.2397214,
+        "cumulative_cost_usd": 5.217189800000001
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 12,
+        "input_tokens": 62462,
+        "output_tokens": 2031,
+        "trigger_tokens": 10881,
+        "cost_usd": 0.2265558,
+        "cumulative_cost_usd": 5.443745600000001
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 13,
+        "input_tokens": 60032,
+        "output_tokens": 1878,
+        "trigger_tokens": 10341,
+        "cost_usd": 0.2165388,
+        "cumulative_cost_usd": 5.660284400000001
+      },
+      {
+        "condition": "3obj_order_pf_B",
+        "agent": "full_cg_db",
+        "episode": 14,
+        "input_tokens": 63193,
+        "output_tokens": 2068,
+        "trigger_tokens": 10999,
+        "cost_usd": 0.2293982,
+        "cumulative_cost_usd": 5.889682600000001
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 0,
+        "input_tokens": 166415,
+        "output_tokens": 1691,
+        "trigger_tokens": 0,
+        "cost_usd": 0.52461,
+        "cumulative_cost_usd": 6.414292600000001
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 1,
+        "input_tokens": 111386,
+        "output_tokens": 1520,
+        "trigger_tokens": 0,
+        "cost_usd": 0.356958,
+        "cumulative_cost_usd": 6.771250600000001
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 2,
+        "input_tokens": 152016,
+        "output_tokens": 1582,
+        "trigger_tokens": 0,
+        "cost_usd": 0.47977800000000004,
+        "cumulative_cost_usd": 7.2510286000000015
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 3,
+        "input_tokens": 159771,
+        "output_tokens": 1877,
+        "trigger_tokens": 0,
+        "cost_usd": 0.507468,
+        "cumulative_cost_usd": 7.758496600000002
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 4,
+        "input_tokens": 124144,
+        "output_tokens": 1650,
+        "trigger_tokens": 0,
+        "cost_usd": 0.397182,
+        "cumulative_cost_usd": 8.155678600000002
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 5,
+        "input_tokens": 124817,
+        "output_tokens": 1538,
+        "trigger_tokens": 0,
+        "cost_usd": 0.397521,
+        "cumulative_cost_usd": 8.553199600000001
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 6,
+        "input_tokens": 87949,
+        "output_tokens": 1330,
+        "trigger_tokens": 0,
+        "cost_usd": 0.283797,
+        "cumulative_cost_usd": 8.8369966
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 7,
+        "input_tokens": 99180,
+        "output_tokens": 1424,
+        "trigger_tokens": 0,
+        "cost_usd": 0.3189,
+        "cumulative_cost_usd": 9.1558966
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 8,
+        "input_tokens": 166234,
+        "output_tokens": 2331,
+        "trigger_tokens": 0,
+        "cost_usd": 0.533667,
+        "cumulative_cost_usd": 9.6895636
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 9,
+        "input_tokens": 113399,
+        "output_tokens": 1596,
+        "trigger_tokens": 0,
+        "cost_usd": 0.36413700000000004,
+        "cumulative_cost_usd": 10.053700599999999
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 10,
+        "input_tokens": 165667,
+        "output_tokens": 1712,
+        "trigger_tokens": 0,
+        "cost_usd": 0.5226810000000001,
+        "cumulative_cost_usd": 10.5763816
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 11,
+        "input_tokens": 150475,
+        "output_tokens": 1571,
+        "trigger_tokens": 0,
+        "cost_usd": 0.47499,
+        "cumulative_cost_usd": 11.0513716
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 12,
+        "input_tokens": 122842,
+        "output_tokens": 1545,
+        "trigger_tokens": 0,
+        "cost_usd": 0.391701,
+        "cumulative_cost_usd": 11.443072599999999
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 13,
+        "input_tokens": 87671,
+        "output_tokens": 1370,
+        "trigger_tokens": 0,
+        "cost_usd": 0.283563,
+        "cumulative_cost_usd": 11.726635599999998
+      },
+      {
+        "condition": "3obj_order_pf_C",
+        "agent": "base_llm",
+        "episode": 14,
+        "input_tokens": 110243,
+        "output_tokens": 1519,
+        "trigger_tokens": 0,
+        "cost_usd": 0.353514,
+        "cumulative_cost_usd": 12.080149599999999
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 0,
+        "input_tokens": 212976,
+        "output_tokens": 3625,
+        "trigger_tokens": 27832,
+        "cost_usd": 0.7155686,
+        "cumulative_cost_usd": 12.795718199999998
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 1,
+        "input_tokens": 177442,
+        "output_tokens": 3376,
+        "trigger_tokens": 23276,
+        "cost_usd": 0.6015868,
+        "cumulative_cost_usd": 13.397304999999998
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 2,
+        "input_tokens": 221453,
+        "output_tokens": 4029,
+        "trigger_tokens": 19374,
+        "cost_usd": 0.7402932000000001,
+        "cumulative_cost_usd": 14.137598199999998
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 3,
+        "input_tokens": 216295,
+        "output_tokens": 3475,
+        "trigger_tokens": 30365,
+        "cost_usd": 0.725302,
+        "cumulative_cost_usd": 14.862900199999997
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 4,
+        "input_tokens": 202155,
+        "output_tokens": 3027,
+        "trigger_tokens": 20680,
+        "cost_usd": 0.6684140000000001,
+        "cumulative_cost_usd": 15.531314199999997
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 5,
+        "input_tokens": 195471,
+        "output_tokens": 3018,
+        "trigger_tokens": 29910,
+        "cost_usd": 0.6556109999999999,
+        "cumulative_cost_usd": 16.186925199999997
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 6,
+        "input_tokens": 194881,
+        "output_tokens": 2998,
+        "trigger_tokens": 29853,
+        "cost_usd": 0.6534954,
+        "cumulative_cost_usd": 16.840420599999998
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 7,
+        "input_tokens": 151690,
+        "output_tokens": 3113,
+        "trigger_tokens": 21152,
+        "cost_usd": 0.5186866,
+        "cumulative_cost_usd": 17.359107199999997
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 8,
+        "input_tokens": 203237,
+        "output_tokens": 2962,
+        "trigger_tokens": 25628,
+        "cost_usd": 0.6746434,
+        "cumulative_cost_usd": 18.033750599999998
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 9,
+        "input_tokens": 190943,
+        "output_tokens": 2764,
+        "trigger_tokens": 27104,
+        "cost_usd": 0.6359722000000001,
+        "cumulative_cost_usd": 18.6697228
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 10,
+        "input_tokens": 192111,
+        "output_tokens": 2985,
+        "trigger_tokens": 30926,
+        "cost_usd": 0.6458488,
+        "cumulative_cost_usd": 19.3155716
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 11,
+        "input_tokens": 209803,
+        "output_tokens": 3215,
+        "trigger_tokens": 27086,
+        "cost_usd": 0.6993028,
+        "cumulative_cost_usd": 20.0148744
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 12,
+        "input_tokens": 154234,
+        "output_tokens": 2252,
+        "trigger_tokens": 19009,
+        "cost_usd": 0.5116892,
+        "cumulative_cost_usd": 20.5265636
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 13,
+        "input_tokens": 138259,
+        "output_tokens": 2860,
+        "trigger_tokens": 19141,
+        "cost_usd": 0.4729898,
+        "cumulative_cost_usd": 20.9995534
+      },
+      {
+        "condition": "3obj_order_pf_D",
+        "agent": "full_cg_db",
+        "episode": 14,
+        "input_tokens": 175608,
+        "output_tokens": 3009,
+        "trigger_tokens": 27666,
+        "cost_usd": 0.5940918,
+        "cumulative_cost_usd": 21.5936452
+      }
+    ]
+  },
+  "results": [
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 0,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 1,
+      "success": true,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 2,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 3,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 4,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 5,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 6,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 7,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 8,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "D",
+        "A",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 9,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 10,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 11,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 12,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 13,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_A",
+      "agent_type": "base_llm",
+      "episode": 14,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 0,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "C",
+        "A",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 1,
+      "success": true,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 2,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 3,
+      "success": true,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 4,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 5,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 6,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 7,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "C",
+        "D",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 8,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 9,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 10,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "D",
+        "C",
+        "A"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 11,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "D",
+        "A",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 12,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 13,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_B",
+      "agent_type": "full_cg_db",
+      "episode": 14,
+      "success": false,
+      "steps": 20,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 0,
+      "success": true,
+      "steps": 40,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 1,
+      "success": true,
+      "steps": 32,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 2,
+      "success": true,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 3,
+      "success": false,
+      "steps": 40,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 4,
+      "success": true,
+      "steps": 34,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 5,
+      "success": true,
+      "steps": 34,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 6,
+      "success": true,
+      "steps": 28,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 7,
+      "success": true,
+      "steps": 30,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 8,
+      "success": false,
+      "steps": 40,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 9,
+      "success": true,
+      "steps": 32,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 10,
+      "success": true,
+      "steps": 40,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 11,
+      "success": true,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 12,
+      "success": true,
+      "steps": 34,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 13,
+      "success": true,
+      "steps": 28,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_C",
+      "agent_type": "base_llm",
+      "episode": 14,
+      "success": true,
+      "steps": 32,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 0,
+      "success": false,
+      "steps": 39,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": false,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "C",
+        "D"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 1,
+      "success": true,
+      "steps": 34,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 2,
+      "success": true,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 3,
+      "success": true,
+      "steps": 39,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 4,
+      "success": false,
+      "steps": 40,
+      "answer_submitted": false,
+      "rule_type_correct": false,
+      "objects_correct": false,
+      "order_correct": null,
+      "true_order": null,
+      "guessed_order": null,
+      "guessed_rule_type": "",
+      "guessed_objects": [],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 5,
+      "success": true,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 6,
+      "success": true,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 7,
+      "success": true,
+      "steps": 32,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 8,
+      "success": true,
+      "steps": 40,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 9,
+      "success": true,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 10,
+      "success": true,
+      "steps": 38,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 11,
+      "success": true,
+      "steps": 40,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 12,
+      "success": true,
+      "steps": 34,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 13,
+      "success": true,
+      "steps": 30,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    },
+    {
+      "condition": "3obj_order_pf_D",
+      "agent_type": "full_cg_db",
+      "episode": 14,
+      "success": true,
+      "steps": 36,
+      "answer_submitted": true,
+      "rule_type_correct": true,
+      "objects_correct": true,
+      "order_correct": true,
+      "true_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_order": [
+        "A",
+        "D",
+        "C"
+      ],
+      "guessed_rule_type": "order_sensitive",
+      "guessed_objects": [
+        "A",
+        "C",
+        "D"
+      ],
+      "partial_feedback_step": 5,
+      "partial_feedback_message": "PARTIAL INSIGHT: Based on your exploration, the detector appears to respond to objects A, C, D. The specific activation condition involving these objects is still unknown."
+    }
+  ]
+}
